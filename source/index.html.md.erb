@@ -1,0 +1,122 @@
+---
+title: API Reference
+
+search: false
+---
+
+# Organization
+
+## Get organization
+> The above command returns JSON structured like this:
+
+<%= partial "includes/json/organization.md.erb" %>   
+
+This endpoint information about the current organization
+
+### HTTP Request
+
+`GET /organization`
+
+### Expand Parameters
+
+Parameter | Description
+--------- | -----------
+admin | [Organization admin user](#get-user)
+users | [List of users](#get-all-users)
+roles | [List of user roles](#roles)
+issueLists | [List of issue lists](#issue-lists) 
+ratings | [List of ratings](#ratings)
+
+## Users
+> The above command returns JSON structured like this:
+
+<%= partial "includes/json/users.md.erb" %>   
+
+This endpoint information about the current organization users
+
+### HTTP Request
+
+`GET /organization/users`
+
+## Roles
+> The above command returns JSON structured like this:
+
+<%= partial "includes/json/roles.md.erb" %>   
+
+This endpoint information about the current organization roles
+
+### HTTP Request
+
+`GET /organization/roles`
+
+## Issue lists
+> The above command returns JSON structured like this:
+
+<%= partial "includes/json/issue-lists.md.erb" %>   
+
+This endpoint information about the current organization issue lists
+
+### HTTP Request
+
+`GET /organization/issue-lists`
+
+## Ratings
+> The above command returns JSON structured like this:
+
+<%= partial "includes/json/ratings.md.erb" %>   
+
+This endpoint information about the current organization ratings
+
+### HTTP Request
+
+`GET /organization/ratings`
+
+# Users
+
+## Get All Users
+> The above command returns JSON structured like this:
+
+<%= partial "includes/json/users.md.erb" %> 
+
+This endpoint retrieves all users.
+
+### HTTP Request
+
+`GET /users`
+
+### Expand Parameters
+
+Parameter | Description
+--------- | -----------
+organization | A user organization information 
+
+## Get User
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "id": 1,
+    "organization_id": 1,
+    "displayName": "User 1",
+    "email": "user1@example.com",
+    "avatar": "https://avatar-cdn.atlassian.com/1093dd9ecf87274ff9723ff18819eae4?s=48&d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2F1093dd9ecf87274ff9723ff18819eae4%3Fd%3Dmm%26s%3D48%26noRedirect%3Dtrue",
+    "role": {
+        "id": 1,
+        "name": "Developer"
+    }
+}
+```
+
+This endpoint retrieves a specific user.
+
+### HTTP Request
+
+`GET /users/<ID>`
+
+### Expand Parameters
+
+Parameter | Description
+--------- | -----------
+organization | A user organization information
+
