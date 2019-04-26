@@ -76,7 +76,7 @@ This endpoint information about the current organization ratings
 ## Get All Users
 > The above command returns JSON structured like this:
 
-<%= partial "includes/json/users.md.erb" %> 
+<%= partial "includes/json/users.md.erb" %>
 
 This endpoint retrieves all users.
 
@@ -88,25 +88,13 @@ This endpoint retrieves all users.
 
 Parameter | Description
 --------- | -----------
-organization | A user organization information 
+[organization](#get-organization) | A user organization information 
 
 ## Get User
 
 > The above command returns JSON structured like this:
 
-```json
-{
-    "id": 1,
-    "organization_id": 1,
-    "displayName": "User 1",
-    "email": "user1@example.com",
-    "avatar": "https://avatar-cdn.atlassian.com/1093dd9ecf87274ff9723ff18819eae4?s=48&d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2F1093dd9ecf87274ff9723ff18819eae4%3Fd%3Dmm%26s%3D48%26noRedirect%3Dtrue",
-    "role": {
-        "id": 1,
-        "name": "Developer"
-    }
-}
-```
+<%= partial "includes/json/user.md.erb" %>
 
 This endpoint retrieves a specific user.
 
@@ -118,5 +106,5 @@ This endpoint retrieves a specific user.
 
 Parameter | Description
 --------- | -----------
-organization | A user organization information
+[organization](#get-organization) | A user organization information
 
