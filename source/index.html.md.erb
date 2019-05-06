@@ -6,7 +6,7 @@ search: false
 
 # Organization
 
-## Get organization
+## Get Organization
 > The above command returns JSON structured like this:
 
 <%= partial "includes/json/organization.md.erb" %>
@@ -23,8 +23,7 @@ Parameter | Description
 --------- | -----------
 admin | [Organization admin user](#get-user)
 users | [List of users](#get-all-users)
-roles | [List of user roles](#roles)
-issueLists | [List of issue lists](#issue-lists) 
+roles | [List of user roles](#roles) 
 ratings | [List of ratings](#ratings)
 
 ## Users
@@ -48,17 +47,6 @@ This endpoint information about the current organization roles
 ### HTTP Request
 
 `GET /organization/roles`
-
-## Issue lists
-> The above command returns JSON structured like this:
-
-<%= partial "includes/json/issue-lists.md.erb" %>   
-
-This endpoint information about the current organization issue lists
-
-### HTTP Request
-
-`GET /organization/issue-lists`
 
 ## Ratings
 > The above command returns JSON structured like this:
@@ -108,3 +96,58 @@ Parameter | Description
 --------- | -----------
 [organization](#get-organization) | A user organization information
 
+## User Updating
+
+> The above command returns JSON structured like this:
+
+<%= partial "includes/json/user.md.erb" %>
+
+This endpoint updates a specific user.
+
+### HTTP Request
+
+`PUT /users/<ID>`
+
+### Available Parameters
+
+Parameter | Description
+--------- | -----------
+[role_id](#roles) | One of the user organization role ID
+
+# Issue Lists
+
+## Get All Lists
+
+> The above command returns JSON structured like this:
+
+<%= partial "includes/json/issue-lists.md.erb" %>
+
+This endpoint retrieves all issue lists.
+
+### HTTP Request
+
+`GET /issue-lists`
+
+## Get List
+
+> The above command returns JSON structured like this:
+
+<%= partial "includes/json/issue-list.md.erb" %>
+
+This endpoint retrieves a specific issue list.
+
+### HTTP Request
+
+`GET /issue-lists/<ID>`
+
+## List Issues
+
+> The above command returns JSON structured like this:
+
+<%= partial "includes/json/issues.md.erb" %>
+
+This endpoint retrieves a list of issues in a specific issue list.
+
+### HTTP Request
+
+`GET /issue-lists/<ID>/issues`
