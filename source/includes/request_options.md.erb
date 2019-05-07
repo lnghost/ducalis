@@ -1,0 +1,20 @@
+# Introduction
+
+## Pagination
+
+The pagination information by the following HTTP headers:
+
+  - `X-Pagination-Total-Count`: The total number of resources;
+  - `X-Pagination-Page-Count`: The number of pages;
+  - `X-Pagination-Current-Page`: The current page (1-based);
+  - `X-Pagination-Per-Page`: The number of resources in each page;
+  - `Link`: A set of navigational links allowing client to traverse the resources page by page.
+
+You can use the following options (GET):
+
+  - `per-page`: number of items per page
+  - `sort`: field for ordering. For example: ?sort=id => ORDER BY ID ASC, ?sort=-id => ORDER BY ID DESC
+  
+## Authentication
+
+You must to be logged in on the site via OAuth2 login button. All requests to the API use you current session. 
