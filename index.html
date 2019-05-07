@@ -212,6 +212,17 @@
       <img src="images/logo.png" class="logo" alt="Logo" />
       <ul id="toc" class="toc-list-h1">
           <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#pagination" class="toc-h2 toc-link" data-title="Pagination">Pagination</a>
+                  </li>
+                  <li>
+                    <a href="#authentication" class="toc-h2 toc-link" data-title="Authentication">Authentication</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#organization" class="toc-h1 toc-link" data-title="Organization">Organization</a>
               <ul class="toc-list-h2">
                   <li>
@@ -307,7 +318,29 @@
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <p><h1 id='organization'>Organization</h1><h2 id='organization-info'>Organization Info</h2>
+        <p><h1 id='introduction'>Introduction</h1><h2 id='pagination'>Pagination</h2>
+<p>The pagination information by the following HTTP headers:</p></p>
+
+<ul>
+<li><code>X-Pagination-Total-Count</code>: The total number of resources;</li>
+<li><code>X-Pagination-Page-Count</code>: The number of pages;</li>
+<li><code>X-Pagination-Current-Page</code>: The current page (1-based);</li>
+<li><code>X-Pagination-Per-Page</code>: The number of resources in each page;</li>
+<li><code>Link</code>: A set of navigational links allowing client to traverse the resources page by page.</li>
+</ul>
+
+<p>You can use the following options (GET):</p>
+
+<ul>
+<li><code>per-page</code>: number of items per page</li>
+<li><code>sort</code>: field for ordering. For example: ?sort=id =&gt; ORDER BY ID ASC, ?sort=-id =&gt; ORDER BY ID DESC</li>
+</ul>
+
+<h2 id='authentication'>Authentication</h2>
+
+<p>You must to be logged in on the site via OAuth2 login button. All requests to the API use you current session. </p>
+
+<p><h1 id='organization'>Organization</h1><h2 id='organization-info'>Organization Info</h2>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote></p>
