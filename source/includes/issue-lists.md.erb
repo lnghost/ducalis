@@ -1,0 +1,97 @@
+# Issue Lists
+
+## Get All Lists
+
+> The above command returns JSON structured like this:
+
+<%= partial "includes/json/issue-lists.md.erb" %>
+
+This endpoint retrieves all issue lists.
+
+### HTTP Request
+
+`GET /issue-lists`
+
+## Get List
+
+> The above command returns JSON structured like this:
+
+<%= partial "includes/json/issue-list.md.erb" %>
+
+This endpoint retrieves a specific issue list.
+
+### HTTP Request
+
+`GET /issue-lists/<ID>`
+
+## List Creation
+
+> The above command returns JSON structured like this:
+
+<%= partial "includes/json/issue-list.md.erb" %>
+
+This endpoint creates a new issue list.
+
+### HTTP Request
+
+`POST /issue-lists` 
+
+### Available Parameters
+
+Parameter | Description
+--------- | -----------
+filter | Jira filter ID
+
+## List Updating
+
+> The above command returns JSON structured like this:
+
+<%= partial "includes/json/issue-list.md.erb" %>
+
+This endpoint updates an exist issue list.
+
+### HTTP Request
+
+`PUT /issue-lists/<ID>` 
+
+### Available Parameters
+
+Parameter | Description
+--------- | -----------
+filter | Jira filter ID
+
+## List Deleting
+
+This endpoint removes an exist issue list.
+
+### HTTP Request
+
+`DELETE /issue-lists/<ID>` 
+
+## List Issues
+
+> The above command returns JSON structured like this:
+
+<%= partial "includes/json/issues.md.erb" %>
+
+This endpoint retrieves a list of issues in a specific issue list.
+
+### HTTP Request
+
+`GET /issue-lists/<ID>/issues`
+
+## Create Vote
+
+This endpoint creates a new vote into the list
+
+### HTTP Request
+
+`POST /issue-lists/<ID>/vote` 
+
+### Available Parameters
+
+Parameter | Description
+--------- | -----------
+issue_id | An issue ID
+rating_id | An issue rating ID
+vote | Value of vote

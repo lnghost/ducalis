@@ -1,0 +1,58 @@
+# Issue Ratings
+
+## Get All Ratings
+> The above command returns JSON structured like this:
+
+<%= partial "includes/json/issue-ratings.md.erb" %>
+
+This endpoint retrieves all issue ratings for a specific role.
+
+### HTTP Request
+
+`GET /roles/<roleId>/issue-ratings`
+
+## Rating Creation
+
+> The above command returns JSON structured like this:
+
+<%= partial "includes/json/issue-rating.md.erb" %>
+
+This endpoint creates a new issue rating.
+
+### HTTP Request
+
+`POST /roles/<roleId>/issue-ratings` 
+
+### Available Parameters
+
+Parameter | Description
+--------- | -----------
+name | Rating name
+coefficient | Rating coefficient
+
+## Rating Updating
+
+> The above command returns JSON structured like this:
+
+<%= partial "includes/json/issue-rating.md.erb" %>
+
+This endpoint updates an exist issue rating.
+
+### HTTP Request
+
+`PUT /roles/<roleId>/issue-ratings/<ID>` 
+
+### Available Parameters
+
+Parameter | Description
+--------- | -----------
+name | Rating name
+coefficient | Rating coefficient
+
+## Rating Deleting
+
+This endpoint removes an exist issue rating.
+
+### HTTP Request
+
+`DELETE /roles/<roleId>/issue-ratings/<ID>` 

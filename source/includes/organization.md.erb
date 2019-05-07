@@ -1,0 +1,22 @@
+# Organization
+
+## Organization Info
+> The above command returns JSON structured like this:
+
+<%= partial "includes/json/organization.md.erb" %>
+
+This endpoint information about the current organization
+
+### HTTP Request
+
+`GET /organization`
+
+### Expand Parameters
+
+Parameter | Description
+--------- | -----------
+admin | [Organization admin user](#get-user)
+users | [List of users](#get-all-users)
+roles | [List of user roles](#roles) 
+ratings | [List of ratings](#get-all-ratings)
+issueLists | [Organization issue lists](#issue-lists)

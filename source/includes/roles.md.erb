@@ -1,0 +1,56 @@
+# Roles
+
+## Get All Roles
+> The above command returns JSON structured like this:
+
+<%= partial "includes/json/roles.md.erb" %>
+
+This endpoint retrieves all roles.
+
+### HTTP Request
+
+`GET /roles`
+
+## Role Creation
+
+> The above command returns JSON structured like this:
+
+<%= partial "includes/json/role.md.erb" %>
+
+This endpoint creates a new role.
+
+### HTTP Request
+
+`POST /roles` 
+
+### Available Parameters
+
+Parameter | Description
+--------- | -----------
+name | Role name
+
+## Role Updating
+
+> The above command returns JSON structured like this:
+
+<%= partial "includes/json/role.md.erb" %>
+
+This endpoint updates an exist role.
+
+### HTTP Request
+
+`PUT /roles/<ID>` 
+
+### Available Parameters
+
+Parameter | Description
+--------- | -----------
+name | Role name
+
+## Role Deleting
+
+This endpoint removes an exist role.
+
+### HTTP Request
+
+`DELETE /roles/<ID>` 

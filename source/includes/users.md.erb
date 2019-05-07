@@ -1,0 +1,54 @@
+# Users
+
+## Get All Users
+> The above command returns JSON structured like this:
+
+<%= partial "includes/json/users.md.erb" %>
+
+This endpoint retrieves all users.
+
+### HTTP Request
+
+`GET /users` 
+
+## Current User
+
+> The above command returns JSON structured like this:
+
+<%= partial "includes/json/user.md.erb" %>
+
+This endpoint retrieves a current user.
+
+### HTTP Request
+
+`GET /users/me`
+
+## Get User
+
+> The above command returns JSON structured like this:
+
+<%= partial "includes/json/user.md.erb" %>
+
+This endpoint retrieves a specific user.
+
+### HTTP Request
+
+`GET /users/<ID>`
+
+## User Updating
+
+> The above command returns JSON structured like this:
+
+<%= partial "includes/json/user.md.erb" %>
+
+This endpoint updates a specific user.
+
+### HTTP Request
+
+`PUT /users/<ID>`
+
+### Available Parameters
+
+Parameter | Description
+--------- | -----------
+[role_id](#roles) | One of the user organization role ID
