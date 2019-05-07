@@ -1,0 +1,76 @@
+<h1 id='roles'>Roles</h1><h2 id='get-all-roles'>Get All Roles</h2>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Developers"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Managers"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint retrieves all roles.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET /roles</code></p>
+<h2 id='role-creation'>Role Creation</h2>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Managers"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint creates a new role.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>POST /roles</code> </p>
+<h3 id='available-parameters'>Available Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>Role name</td>
+</tr>
+</tbody></table>
+<h2 id='role-updating'>Role Updating</h2>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Managers"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint updates an exist role.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>PUT /roles/&lt;ID&gt;</code> </p>
+<h3 id='available-parameters-2'>Available Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>Role name</td>
+</tr>
+</tbody></table>
+<h2 id='role-deleting'>Role Deleting</h2>
+<p>This endpoint removes an exist role.</p>
+<h3 id='http-request-4'>HTTP Request</h3>
+<p><code>DELETE /roles/&lt;ID&gt;</code> </p>

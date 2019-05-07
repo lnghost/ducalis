@@ -1,705 +1,7 @@
-
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Reference</title>
-
-    <style>
-      .highlight table td { padding: 5px; }
-.highlight table pre { margin: 0; }
-.highlight .gh {
-  color: #999999;
-}
-.highlight .sr {
-  color: #f6aa11;
-}
-.highlight .go {
-  color: #888888;
-}
-.highlight .gp {
-  color: #555555;
-}
-.highlight .gs {
-}
-.highlight .gu {
-  color: #aaaaaa;
-}
-.highlight .nb {
-  color: #f6aa11;
-}
-.highlight .cm {
-  color: #75715e;
-}
-.highlight .cp {
-  color: #75715e;
-}
-.highlight .c1 {
-  color: #75715e;
-}
-.highlight .cs {
-  color: #75715e;
-}
-.highlight .c, .highlight .cd {
-  color: #75715e;
-}
-.highlight .err {
-  color: #960050;
-}
-.highlight .gr {
-  color: #960050;
-}
-.highlight .gt {
-  color: #960050;
-}
-.highlight .gd {
-  color: #49483e;
-}
-.highlight .gi {
-  color: #49483e;
-}
-.highlight .ge {
-  color: #49483e;
-}
-.highlight .kc {
-  color: #66d9ef;
-}
-.highlight .kd {
-  color: #66d9ef;
-}
-.highlight .kr {
-  color: #66d9ef;
-}
-.highlight .no {
-  color: #66d9ef;
-}
-.highlight .kt {
-  color: #66d9ef;
-}
-.highlight .mf {
-  color: #ae81ff;
-}
-.highlight .mh {
-  color: #ae81ff;
-}
-.highlight .il {
-  color: #ae81ff;
-}
-.highlight .mi {
-  color: #ae81ff;
-}
-.highlight .mo {
-  color: #ae81ff;
-}
-.highlight .m, .highlight .mb, .highlight .mx {
-  color: #ae81ff;
-}
-.highlight .sc {
-  color: #ae81ff;
-}
-.highlight .se {
-  color: #ae81ff;
-}
-.highlight .ss {
-  color: #ae81ff;
-}
-.highlight .sd {
-  color: #e6db74;
-}
-.highlight .s2 {
-  color: #e6db74;
-}
-.highlight .sb {
-  color: #e6db74;
-}
-.highlight .sh {
-  color: #e6db74;
-}
-.highlight .si {
-  color: #e6db74;
-}
-.highlight .sx {
-  color: #e6db74;
-}
-.highlight .s1 {
-  color: #e6db74;
-}
-.highlight .s {
-  color: #e6db74;
-}
-.highlight .na {
-  color: #a6e22e;
-}
-.highlight .nc {
-  color: #a6e22e;
-}
-.highlight .nd {
-  color: #a6e22e;
-}
-.highlight .ne {
-  color: #a6e22e;
-}
-.highlight .nf {
-  color: #a6e22e;
-}
-.highlight .vc {
-  color: #ffffff;
-}
-.highlight .nn {
-  color: #ffffff;
-}
-.highlight .nl {
-  color: #ffffff;
-}
-.highlight .ni {
-  color: #ffffff;
-}
-.highlight .bp {
-  color: #ffffff;
-}
-.highlight .vg {
-  color: #ffffff;
-}
-.highlight .vi {
-  color: #ffffff;
-}
-.highlight .nv {
-  color: #ffffff;
-}
-.highlight .w {
-  color: #ffffff;
-}
-.highlight {
-  color: #ffffff;
-}
-.highlight .n, .highlight .py, .highlight .nx {
-  color: #ffffff;
-}
-.highlight .ow {
-  color: #f92672;
-}
-.highlight .nt {
-  color: #f92672;
-}
-.highlight .k, .highlight .kv {
-  color: #f92672;
-}
-.highlight .kn {
-  color: #f92672;
-}
-.highlight .kp {
-  color: #f92672;
-}
-.highlight .o {
-  color: #f92672;
-}
-    </style>
-    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
-    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
-      <script src="javascripts/all_nosearch.js"></script>
-  </head>
-
-  <body class="index" data-languages="[]">
-    <a href="#" id="nav-button">
-      <span>
-        NAV
-        <img src="images/navbar.png" alt="Navbar" />
-      </span>
-    </a>
-    <div class="toc-wrapper">
-      <img src="images/logo.png" class="logo" alt="Logo" />
-      <ul id="toc" class="toc-list-h1">
-          <li>
-            <a href="#organization" class="toc-h1 toc-link" data-title="Organization">Organization</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#organization-info" class="toc-h2 toc-link" data-title="Organization Info">Organization Info</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#users" class="toc-h1 toc-link" data-title="Users">Users</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#get-all-users" class="toc-h2 toc-link" data-title="Get All Users">Get All Users</a>
-                  </li>
-                  <li>
-                    <a href="#current-user" class="toc-h2 toc-link" data-title="Current User">Current User</a>
-                  </li>
-                  <li>
-                    <a href="#get-user" class="toc-h2 toc-link" data-title="Get User">Get User</a>
-                  </li>
-                  <li>
-                    <a href="#user-updating" class="toc-h2 toc-link" data-title="User Updating">User Updating</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#roles" class="toc-h1 toc-link" data-title="Roles">Roles</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#get-all-roles" class="toc-h2 toc-link" data-title="Get All Roles">Get All Roles</a>
-                  </li>
-                  <li>
-                    <a href="#role-creation" class="toc-h2 toc-link" data-title="Role Creation">Role Creation</a>
-                  </li>
-                  <li>
-                    <a href="#role-updating" class="toc-h2 toc-link" data-title="Role Updating">Role Updating</a>
-                  </li>
-                  <li>
-                    <a href="#role-deleting" class="toc-h2 toc-link" data-title="Role Deleting">Role Deleting</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#issue-ratings" class="toc-h1 toc-link" data-title="Issue Ratings">Issue Ratings</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#get-all-ratings" class="toc-h2 toc-link" data-title="Get All Ratings">Get All Ratings</a>
-                  </li>
-                  <li>
-                    <a href="#rating-creation" class="toc-h2 toc-link" data-title="Rating Creation">Rating Creation</a>
-                  </li>
-                  <li>
-                    <a href="#rating-updating" class="toc-h2 toc-link" data-title="Rating Updating">Rating Updating</a>
-                  </li>
-                  <li>
-                    <a href="#rating-deleting" class="toc-h2 toc-link" data-title="Rating Deleting">Rating Deleting</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#issue-lists" class="toc-h1 toc-link" data-title="Issue Lists">Issue Lists</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#get-all-lists" class="toc-h2 toc-link" data-title="Get All Lists">Get All Lists</a>
-                  </li>
-                  <li>
-                    <a href="#get-list" class="toc-h2 toc-link" data-title="Get List">Get List</a>
-                  </li>
-                  <li>
-                    <a href="#list-creation" class="toc-h2 toc-link" data-title="List Creation">List Creation</a>
-                  </li>
-                  <li>
-                    <a href="#list-updating" class="toc-h2 toc-link" data-title="List Updating">List Updating</a>
-                  </li>
-                  <li>
-                    <a href="#list-deleting" class="toc-h2 toc-link" data-title="List Deleting">List Deleting</a>
-                  </li>
-                  <li>
-                    <a href="#list-issues" class="toc-h2 toc-link" data-title="List Issues">List Issues</a>
-                  </li>
-                  <li>
-                    <a href="#create-vote" class="toc-h2 toc-link" data-title="Create Vote">Create Vote</a>
-                  </li>
-                  <li>
-                    <a href="#users-votes" class="toc-h2 toc-link" data-title="Users Votes">Users Votes</a>
-                  </li>
-                  <li>
-                    <a href="#summary-votes" class="toc-h2 toc-link" data-title="Summary Votes">Summary Votes</a>
-                  </li>
-              </ul>
-          </li>
-      </ul>
-    </div>
-    <div class="page-wrapper">
-      <div class="dark-box"></div>
-      <div class="content">
-        <p><h1 id='organization'>Organization</h1><h2 id='organization-info'>Organization Info</h2>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote></p>
-
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-</span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-</span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My organization"</span><span class="p">,</span><span class="w">
-</span><span class="s2">"admin_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-
-<p>This endpoint information about the current organization</p>
-
-<h3 id='http-request'>HTTP Request</h3>
-
-<p><code>GET /organization</code></p>
-
-<h3 id='expand-parameters'>Expand Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>admin</td>
-<td><a href="#get-user">Organization admin user</a></td>
-</tr>
-<tr>
-<td>users</td>
-<td><a href="#get-all-users">List of users</a></td>
-</tr>
-<tr>
-<td>roles</td>
-<td><a href="#roles">List of user roles</a></td>
-</tr>
-<tr>
-<td>ratings</td>
-<td><a href="#get-all-ratings">List of ratings</a></td>
-</tr>
-<tr>
-<td>issueLists</td>
-<td><a href="#issue-lists">Organization issue lists</a></td>
-</tr>
-</tbody></table>
-
-<p><h1 id='users'>Users</h1><h2 id='get-all-users'>Get All Users</h2>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote></p>
-
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"displayName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User 1"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user1@example.com"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://avatar-cdn.atlassian.com/1093dd9ecf87274ff9723ff18819eae4?s=48&amp;d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2F1093dd9ecf87274ff9723ff18819eae4%3Fd%3Dmm%26s%3D48%26noRedirect%3Dtrue"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Developer"</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"displayName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User 2"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user2@example.com"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://avatar-cdn.atlassian.com/fec5dac2a617615e81b49fbd049651fa?s=48&amp;d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Ffec5dac2a617615e81b49fbd049651fa%3Fd%3Dmm%26s%3D48%26noRedirect%3Dtrue"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Manager"</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
-
-<p>This endpoint retrieves all users.</p>
-
-<h3 id='http-request'>HTTP Request</h3>
-
-<p><code>GET /users</code> </p>
-
-<h2 id='current-user'>Current User</h2>
-
+<h1 id='issue-lists'>Issue Lists</h1><h2 id='get-all-lists'>Get All Lists</h2>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"displayName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User 1"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user1@example.com"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://avatar-cdn.atlassian.com/1093dd9ecf87274ff9723ff18819eae4?s=48&amp;d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2F1093dd9ecf87274ff9723ff18819eae4%3Fd%3Dmm%26s%3D48%26noRedirect%3Dtrue"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Developer"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-
-<p>This endpoint retrieves a current user.</p>
-
-<h3 id='http-request-2'>HTTP Request</h3>
-
-<p><code>GET /users/me</code></p>
-
-<h2 id='get-user'>Get User</h2>
-
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"displayName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User 1"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user1@example.com"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://avatar-cdn.atlassian.com/1093dd9ecf87274ff9723ff18819eae4?s=48&amp;d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2F1093dd9ecf87274ff9723ff18819eae4%3Fd%3Dmm%26s%3D48%26noRedirect%3Dtrue"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Developer"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-
-<p>This endpoint retrieves a specific user.</p>
-
-<h3 id='http-request-3'>HTTP Request</h3>
-
-<p><code>GET /users/&lt;ID&gt;</code></p>
-
-<h2 id='user-updating'>User Updating</h2>
-
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"displayName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User 1"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user1@example.com"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://avatar-cdn.atlassian.com/1093dd9ecf87274ff9723ff18819eae4?s=48&amp;d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2F1093dd9ecf87274ff9723ff18819eae4%3Fd%3Dmm%26s%3D48%26noRedirect%3Dtrue"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Developer"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-
-<p>This endpoint updates a specific user.</p>
-
-<h3 id='http-request-4'>HTTP Request</h3>
-
-<p><code>PUT /users/&lt;ID&gt;</code></p>
-
-<h3 id='available-parameters'>Available Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><a href="#roles">role_id</a></td>
-<td>One of the user organization role ID</td>
-</tr>
-</tbody></table>
-
-<p><h1 id='roles'>Roles</h1><h2 id='get-all-roles'>Get All Roles</h2>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote></p>
-
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Developers"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Managers"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
-
-<p>This endpoint retrieves all roles.</p>
-
-<h3 id='http-request'>HTTP Request</h3>
-
-<p><code>GET /roles</code></p>
-
-<h2 id='role-creation'>Role Creation</h2>
-
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Managers"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-
-<p>This endpoint creates a new role.</p>
-
-<h3 id='http-request-2'>HTTP Request</h3>
-
-<p><code>POST /roles</code> </p>
-
-<h3 id='available-parameters'>Available Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>name</td>
-<td>Role name</td>
-</tr>
-</tbody></table>
-
-<h2 id='role-updating'>Role Updating</h2>
-
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Managers"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-
-<p>This endpoint updates an exist role.</p>
-
-<h3 id='http-request-3'>HTTP Request</h3>
-
-<p><code>PUT /roles/&lt;ID&gt;</code> </p>
-
-<h3 id='available-parameters-2'>Available Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>name</td>
-<td>Role name</td>
-</tr>
-</tbody></table>
-
-<h2 id='role-deleting'>Role Deleting</h2>
-
-<p>This endpoint removes an exist role.</p>
-
-<h3 id='http-request-4'>HTTP Request</h3>
-
-<p><code>DELETE /roles/&lt;ID&gt;</code> </p>
-
-<p><h1 id='issue-ratings'>Issue Ratings</h1><h2 id='get-all-ratings'>Get All Ratings</h2>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote></p>
-
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Development Time"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rating description"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"coefficient"</span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Importance"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"coefficient"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Customer Acquisition"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"coefficient"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
-
-<p>This endpoint retrieves all issue ratings for a specific role.</p>
-
-<h3 id='http-request'>HTTP Request</h3>
-
-<p><code>GET /roles/&lt;roleId&gt;/issue-ratings</code></p>
-
-<h2 id='rating-creation'>Rating Creation</h2>
-
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Development Time"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rating description"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"coefficient"</span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-
-<p>This endpoint creates a new issue rating.</p>
-
-<h3 id='http-request-2'>HTTP Request</h3>
-
-<p><code>POST /roles/&lt;roleId&gt;/issue-ratings</code> </p>
-
-<h3 id='available-parameters'>Available Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>name</td>
-<td>Rating name</td>
-</tr>
-<tr>
-<td>description</td>
-<td>Rating description</td>
-</tr>
-<tr>
-<td>coefficient</td>
-<td>Rating coefficient</td>
-</tr>
-</tbody></table>
-
-<h2 id='rating-updating'>Rating Updating</h2>
-
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Development Time"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rating description"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"coefficient"</span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-
-<p>This endpoint updates an exist issue rating.</p>
-
-<h3 id='http-request-3'>HTTP Request</h3>
-
-<p><code>PUT /roles/&lt;roleId&gt;/issue-ratings/&lt;ID&gt;</code> </p>
-
-<h3 id='available-parameters-2'>Available Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>name</td>
-<td>Rating name</td>
-</tr>
-<tr>
-<td>description</td>
-<td>Rating description</td>
-</tr>
-<tr>
-<td>coefficient</td>
-<td>Rating coefficient</td>
-</tr>
-</tbody></table>
-
-<h2 id='rating-deleting'>Rating Deleting</h2>
-
-<p>This endpoint removes an exist issue rating.</p>
-
-<h3 id='http-request-4'>HTTP Request</h3>
-
-<p><code>DELETE /roles/&lt;roleId&gt;/issue-ratings/&lt;ID&gt;</code> </p>
-
-<p><h1 id='issue-lists'>Issue Lists</h1><h2 id='get-all-lists'>Get All Lists</h2>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote></p>
 
 <pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
@@ -717,13 +19,9 @@
 </span></code></pre>
 
 <p>This endpoint retrieves all issue lists.</p>
-
 <h3 id='http-request'>HTTP Request</h3>
-
 <p><code>GET /issue-lists</code></p>
-
 <h2 id='get-list'>Get List</h2>
-
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
@@ -742,13 +40,9 @@
 </span></code></pre>
 
 <p>This endpoint retrieves a specific issue list.</p>
-
 <h3 id='http-request-2'>HTTP Request</h3>
-
 <p><code>GET /issue-lists/&lt;ID&gt;</code></p>
-
 <h2 id='list-creation'>List Creation</h2>
-
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
@@ -767,13 +61,9 @@
 </span></code></pre>
 
 <p>This endpoint creates a new issue list.</p>
-
 <h3 id='http-request-3'>HTTP Request</h3>
-
 <p><code>POST /issue-lists</code> </p>
-
 <h3 id='available-parameters'>Available Parameters</h3>
-
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -785,9 +75,7 @@
 <td>Jira filter ID</td>
 </tr>
 </tbody></table>
-
 <h2 id='list-updating'>List Updating</h2>
-
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
@@ -806,13 +94,9 @@
 </span></code></pre>
 
 <p>This endpoint updates an exist issue list.</p>
-
 <h3 id='http-request-4'>HTTP Request</h3>
-
 <p><code>PUT /issue-lists/&lt;ID&gt;</code> </p>
-
 <h3 id='available-parameters-2'>Available Parameters</h3>
-
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -824,17 +108,11 @@
 <td>Jira filter ID</td>
 </tr>
 </tbody></table>
-
 <h2 id='list-deleting'>List Deleting</h2>
-
 <p>This endpoint removes an exist issue list.</p>
-
 <h3 id='http-request-5'>HTTP Request</h3>
-
 <p><code>DELETE /issue-lists/&lt;ID&gt;</code> </p>
-
 <h2 id='list-issues'>List Issues</h2>
-
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
@@ -885,21 +163,13 @@
 </span></code></pre>
 
 <p>This endpoint retrieves a list of issues in a specific issue list.</p>
-
 <h3 id='http-request-6'>HTTP Request</h3>
-
 <p><code>GET /issue-lists/&lt;ID&gt;/issues</code></p>
-
 <h2 id='create-vote'>Create Vote</h2>
-
 <p>This endpoint creates a new vote into the list</p>
-
 <h3 id='http-request-7'>HTTP Request</h3>
-
 <p><code>POST /issue-lists/&lt;ID&gt;/vote</code> </p>
-
 <h3 id='available-parameters-3'>Available Parameters</h3>
-
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -919,9 +189,7 @@
 <td>Value of vote</td>
 </tr>
 </tbody></table>
-
 <h2 id='users-votes'>Users Votes</h2>
-
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
@@ -986,13 +254,9 @@
 </span></code></pre>
 
 <p>This endpoint returns a list of votes divided by users </p>
-
 <h3 id='http-request-8'>HTTP Request</h3>
-
 <p><code>GET /issue-lists/&lt;ID&gt;/users-votes</code> </p>
-
 <h3 id='available-parameters-4'>Available Parameters</h3>
-
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -1008,9 +272,7 @@
 <td>A role ID (optional)</td>
 </tr>
 </tbody></table>
-
 <h2 id='summary-votes'>Summary Votes</h2>
-
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
@@ -1074,14 +336,5 @@
 
 <p>This endpoint returns a list of votes divided by users.
 If <code>rating_id</code> in <code>votes</code> collection is null – it means that this is a summary vote </p>
-
 <h3 id='http-request-9'>HTTP Request</h3>
-
 <p><code>GET /issue-lists/&lt;ID&gt;/summary-votes</code> </p>
-
-      </div>
-      <div class="dark-box">
-      </div>
-    </div>
-  </body>
-</html>
