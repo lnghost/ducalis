@@ -114,3 +114,17 @@ Parameter | Description
 --------- | -----------
 user_id | A user ID (optional)
 role_id | A role ID (optional)
+
+## Summary Votes
+
+> The above command returns JSON structured like this:
+
+<%= partial "includes/json/summary-votes.md.erb" %>
+
+This endpoint returns a list of votes divided by users.
+If `rating_id` in `votes` collection is null – it means that this is a summary vote 
+
+### HTTP Request
+
+`GET /issue-lists/<ID>/summary-votes` 
+
