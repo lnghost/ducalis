@@ -18,6 +18,18 @@
 <p>This endpoint retrieves all roles.</p>
 <h3 id='http-request'>HTTP Request</h3>
 <p><code>GET /roles</code></p>
+<h3 id='expand-parameters'>Expand Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ratings</td>
+<td><a href="#get-all-ratings">Role ratings</a></td>
+</tr>
+</tbody></table>
 <h2 id='role-creation'>Role Creation</h2>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
