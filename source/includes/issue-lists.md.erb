@@ -12,6 +12,12 @@ This endpoint retrieves all issue lists.
 
 `GET /issue-lists`
 
+### Available Parameters
+
+Parameter | Description
+--------- | -----------
+all | Show all lists. By default, only lists for rating are show
+
 ## Get List
 
 > The above command returns JSON structured like this:
@@ -23,24 +29,6 @@ This endpoint retrieves a specific issue list.
 ### HTTP Request
 
 `GET /issue-lists/<ID>`
-
-## List Creation
-
-> The above command returns JSON structured like this:
-
-<%= partial "includes/json/issue-list.md.erb" %>
-
-This endpoint creates a new issue list.
-
-### HTTP Request
-
-`POST /issue-lists` 
-
-### Available Parameters
-
-Parameter | Description
---------- | -----------
-filter | Jira filter ID
 
 ## List Updating
 
@@ -58,15 +46,7 @@ This endpoint updates an exist issue list.
 
 Parameter | Description
 --------- | -----------
-filter | Jira filter ID
-
-## List Deleting
-
-This endpoint removes an exist issue list.
-
-### HTTP Request
-
-`DELETE /issue-lists/<ID>` 
+is_rating_list | Use this list for ratings
 
 ## List Issues
 
