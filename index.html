@@ -291,13 +291,7 @@
                     <a href="#get-list" class="toc-h2 toc-link" data-title="Get List">Get List</a>
                   </li>
                   <li>
-                    <a href="#list-creation" class="toc-h2 toc-link" data-title="List Creation">List Creation</a>
-                  </li>
-                  <li>
                     <a href="#list-updating" class="toc-h2 toc-link" data-title="List Updating">List Updating</a>
-                  </li>
-                  <li>
-                    <a href="#list-deleting" class="toc-h2 toc-link" data-title="List Deleting">List Deleting</a>
                   </li>
                   <li>
                     <a href="#list-issues" class="toc-h2 toc-link" data-title="List Issues">List Issues</a>
@@ -754,7 +748,8 @@
         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
         </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Active issues"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"filter"</span><span class="p">:</span><span class="w"> </span><span class="mi">10100</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"jira_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10100</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"is_rating_list"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
         </span><span class="s2">"_links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
             </span><span class="s2">"jira"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                 </span><span class="s2">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://domain.atlassian.net/issues/?filter=10100"</span><span class="w">
@@ -770,6 +765,20 @@
 
 <p><code>GET /issue-lists</code></p>
 
+<h3 id='available-parameters'>Available Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>all</td>
+<td>Show all lists. By default, only lists for rating are show</td>
+</tr>
+</tbody></table>
+
 <h2 id='get-list'>Get List</h2>
 
 <blockquote>
@@ -780,7 +789,8 @@
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Active issues"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"filter"</span><span class="p">:</span><span class="w"> </span><span class="mi">10100</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"jira_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10100</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"is_rating_list"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
     </span><span class="s2">"_links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"jira"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
             </span><span class="s2">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://domain.atlassian.net/issues/?filter=10100"</span><span class="w">
@@ -795,45 +805,6 @@
 
 <p><code>GET /issue-lists/&lt;ID&gt;</code></p>
 
-<h2 id='list-creation'>List Creation</h2>
-
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Active issues"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"filter"</span><span class="p">:</span><span class="w"> </span><span class="mi">10100</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"_links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"jira"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://domain.atlassian.net/issues/?filter=10100"</span><span class="w">
-        </span><span class="p">}</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-
-<p>This endpoint creates a new issue list.</p>
-
-<h3 id='http-request-3'>HTTP Request</h3>
-
-<p><code>POST /issue-lists</code> </p>
-
-<h3 id='available-parameters'>Available Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>filter</td>
-<td>Jira filter ID</td>
-</tr>
-</tbody></table>
-
 <h2 id='list-updating'>List Updating</h2>
 
 <blockquote>
@@ -844,7 +815,8 @@
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Active issues"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"filter"</span><span class="p">:</span><span class="w"> </span><span class="mi">10100</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"jira_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10100</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"is_rating_list"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
     </span><span class="s2">"_links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="s2">"jira"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
             </span><span class="s2">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://domain.atlassian.net/issues/?filter=10100"</span><span class="w">
@@ -855,7 +827,7 @@
 
 <p>This endpoint updates an exist issue list.</p>
 
-<h3 id='http-request-4'>HTTP Request</h3>
+<h3 id='http-request-3'>HTTP Request</h3>
 
 <p><code>PUT /issue-lists/&lt;ID&gt;</code> </p>
 
@@ -868,18 +840,10 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>filter</td>
-<td>Jira filter ID</td>
+<td>is_rating_list</td>
+<td>Use this list for ratings</td>
 </tr>
 </tbody></table>
-
-<h2 id='list-deleting'>List Deleting</h2>
-
-<p>This endpoint removes an exist issue list.</p>
-
-<h3 id='http-request-5'>HTTP Request</h3>
-
-<p><code>DELETE /issue-lists/&lt;ID&gt;</code> </p>
 
 <h2 id='list-issues'>List Issues</h2>
 
@@ -934,7 +898,7 @@
 
 <p>This endpoint retrieves a list of issues in a specific issue list.</p>
 
-<h3 id='http-request-6'>HTTP Request</h3>
+<h3 id='http-request-4'>HTTP Request</h3>
 
 <p><code>GET /issue-lists/&lt;ID&gt;/issues</code></p>
 
@@ -942,7 +906,7 @@
 
 <p>This endpoint creates a new vote into the list</p>
 
-<h3 id='http-request-7'>HTTP Request</h3>
+<h3 id='http-request-5'>HTTP Request</h3>
 
 <p><code>POST /issue-lists/&lt;ID&gt;/vote</code> </p>
 
@@ -1035,7 +999,7 @@
 
 <p>This endpoint returns a list of votes divided by users </p>
 
-<h3 id='http-request-8'>HTTP Request</h3>
+<h3 id='http-request-6'>HTTP Request</h3>
 
 <p><code>GET /issue-lists/&lt;ID&gt;/users-votes</code> </p>
 
@@ -1123,7 +1087,7 @@
 <p>This endpoint returns a list of votes divided by users.
 If <code>rating_id</code> in <code>votes</code> collection is null – it means that this is a summary vote </p>
 
-<h3 id='http-request-9'>HTTP Request</h3>
+<h3 id='http-request-7'>HTTP Request</h3>
 
 <p><code>GET /issue-lists/&lt;ID&gt;/summary-votes</code> </p>
 
