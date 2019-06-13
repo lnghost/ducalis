@@ -108,3 +108,19 @@ If `rating_id` in `votes` collection is null – it means that this is a summary
 
 `GET /issue-lists/<ID>/summary-votes` 
 
+## Unvoted issues count
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "data": 5375
+}
+```
+
+This endpoint returns a number of unvoted issues in the list, for a current user only 
+
+### HTTP Request
+
+`GET /issue-lists/<ID>/unvoted` 
+
