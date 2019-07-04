@@ -9,7 +9,7 @@ This endpoint retrieves all issue ratings for a specific role.
 
 ### HTTP Request
 
-`GET /roles/<roleId>/issue-ratings`
+`GET /issue-lists/<LIST_ID>/roles/<ROLE_ID>/issue-ratings`
 
 ## Rating Creation
 
@@ -21,7 +21,7 @@ This endpoint creates a new issue rating.
 
 ### HTTP Request
 
-`POST /roles/<roleId>/issue-ratings` 
+`POST /issue-lists/<LIST_ID>/roles/<roleId>/issue-ratings` 
 
 ### Available Parameters
 
@@ -41,7 +41,7 @@ This endpoint updates an exist issue rating.
 
 ### HTTP Request
 
-`PUT /roles/<roleId>/issue-ratings/<ID>` 
+`PUT /issue-lists/<LIST_ID>/roles/<roleId>/issue-ratings/<ID>` 
 
 ### Available Parameters
 
@@ -57,4 +57,4 @@ This endpoint removes an exist issue rating.
 
 ### HTTP Request
 
-`DELETE /roles/<roleId>/issue-ratings/<ID>` 
+`DELETE /issue-lists/<LIST_ID>/roles/<roleId>/issue-ratings/<ID>` 
