@@ -34,6 +34,18 @@
 <td>Show all lists. By default, only lists for rating are show</td>
 </tr>
 </tbody></table>
+<h3 id='expand-parameters'>Expand Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>roles</td>
+<td><a href="#roles">List roles</a></td>
+</tr>
+</tbody></table>
 <h2 id='get-list'>Get List</h2>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>

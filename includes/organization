@@ -29,10 +29,6 @@
 <td><a href="#get-all-users">List of users</a></td>
 </tr>
 <tr>
-<td>roles</td>
-<td><a href="#roles">List of user roles</a></td>
-</tr>
-<tr>
 <td>issueLists</td>
 <td><a href="#issue-lists">Organization issue lists</a></td>
 </tr>

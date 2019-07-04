@@ -242,43 +242,6 @@
                   <li>
                     <a href="#get-user" class="toc-h2 toc-link" data-title="Get User">Get User</a>
                   </li>
-                  <li>
-                    <a href="#user-updating" class="toc-h2 toc-link" data-title="User Updating">User Updating</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#roles" class="toc-h1 toc-link" data-title="Roles">Roles</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#get-all-roles" class="toc-h2 toc-link" data-title="Get All Roles">Get All Roles</a>
-                  </li>
-                  <li>
-                    <a href="#role-creation" class="toc-h2 toc-link" data-title="Role Creation">Role Creation</a>
-                  </li>
-                  <li>
-                    <a href="#role-updating" class="toc-h2 toc-link" data-title="Role Updating">Role Updating</a>
-                  </li>
-                  <li>
-                    <a href="#role-deleting" class="toc-h2 toc-link" data-title="Role Deleting">Role Deleting</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#issue-ratings" class="toc-h1 toc-link" data-title="Issue Ratings">Issue Ratings</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#get-all-ratings" class="toc-h2 toc-link" data-title="Get All Ratings">Get All Ratings</a>
-                  </li>
-                  <li>
-                    <a href="#rating-creation" class="toc-h2 toc-link" data-title="Rating Creation">Rating Creation</a>
-                  </li>
-                  <li>
-                    <a href="#rating-updating" class="toc-h2 toc-link" data-title="Rating Updating">Rating Updating</a>
-                  </li>
-                  <li>
-                    <a href="#rating-deleting" class="toc-h2 toc-link" data-title="Rating Deleting">Rating Deleting</a>
-                  </li>
               </ul>
           </li>
           <li>
@@ -307,6 +270,54 @@
                   </li>
                   <li>
                     <a href="#unvoted-issues-count" class="toc-h2 toc-link" data-title="Unvoted issues count">Unvoted issues count</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#roles" class="toc-h1 toc-link" data-title="Roles">Roles</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-roles" class="toc-h2 toc-link" data-title="Get All Roles">Get All Roles</a>
+                  </li>
+                  <li>
+                    <a href="#role-creation" class="toc-h2 toc-link" data-title="Role Creation">Role Creation</a>
+                  </li>
+                  <li>
+                    <a href="#role-updating" class="toc-h2 toc-link" data-title="Role Updating">Role Updating</a>
+                  </li>
+                  <li>
+                    <a href="#role-deleting" class="toc-h2 toc-link" data-title="Role Deleting">Role Deleting</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#role-users" class="toc-h1 toc-link" data-title="Role Users">Role Users</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-role-users" class="toc-h2 toc-link" data-title="Get All Role Users">Get All Role Users</a>
+                  </li>
+                  <li>
+                    <a href="#role-user-creation" class="toc-h2 toc-link" data-title="Role User Creation">Role User Creation</a>
+                  </li>
+                  <li>
+                    <a href="#role-deleting" class="toc-h2 toc-link" data-title="Role Deleting">Role Deleting</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#issue-ratings" class="toc-h1 toc-link" data-title="Issue Ratings">Issue Ratings</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-ratings" class="toc-h2 toc-link" data-title="Get All Ratings">Get All Ratings</a>
+                  </li>
+                  <li>
+                    <a href="#rating-creation" class="toc-h2 toc-link" data-title="Rating Creation">Rating Creation</a>
+                  </li>
+                  <li>
+                    <a href="#rating-updating" class="toc-h2 toc-link" data-title="Rating Updating">Rating Updating</a>
+                  </li>
+                  <li>
+                    <a href="#rating-deleting" class="toc-h2 toc-link" data-title="Rating Deleting">Rating Deleting</a>
                   </li>
               </ul>
           </li>
@@ -377,10 +388,6 @@
 <td><a href="#get-all-users">List of users</a></td>
 </tr>
 <tr>
-<td>roles</td>
-<td><a href="#roles">List of user roles</a></td>
-</tr>
-<tr>
 <td>issueLists</td>
 <td><a href="#issue-lists">Organization issue lists</a></td>
 </tr>
@@ -398,11 +405,7 @@
         </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user1@example.com"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://avatar-cdn.atlassian.com/1093dd9ecf87274ff9723ff18819eae4?s=48&amp;d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2F1093dd9ecf87274ff9723ff18819eae4%3Fd%3Dmm%26s%3D48%26noRedirect%3Dtrue"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"registered"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Developer"</span><span class="w">
-        </span><span class="p">}</span><span class="w">
+        </span><span class="s2">"registered"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
@@ -410,11 +413,7 @@
         </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user2@example.com"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://avatar-cdn.atlassian.com/fec5dac2a617615e81b49fbd049651fa?s=48&amp;d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Ffec5dac2a617615e81b49fbd049651fa%3Fd%3Dmm%26s%3D48%26noRedirect%3Dtrue"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"registered"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Manager"</span><span class="w">
-        </span><span class="p">}</span><span class="w">
+        </span><span class="s2">"registered"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
@@ -455,11 +454,7 @@
     </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user1@example.com"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://avatar-cdn.atlassian.com/1093dd9ecf87274ff9723ff18819eae4?s=48&amp;d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2F1093dd9ecf87274ff9723ff18819eae4%3Fd%3Dmm%26s%3D48%26noRedirect%3Dtrue"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"registered"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Developer"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
+    </span><span class="s2">"registered"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -481,11 +476,7 @@
     </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user1@example.com"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://avatar-cdn.atlassian.com/1093dd9ecf87274ff9723ff18819eae4?s=48&amp;d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2F1093dd9ecf87274ff9723ff18819eae4%3Fd%3Dmm%26s%3D48%26noRedirect%3Dtrue"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"registered"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Developer"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
+    </span><span class="s2">"registered"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -494,280 +485,6 @@
 <h3 id='http-request-3'>HTTP Request</h3>
 
 <p><code>GET /users/&lt;ID&gt;</code></p>
-
-<h2 id='user-updating'>User Updating</h2>
-
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"displayName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User 1"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user1@example.com"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://avatar-cdn.atlassian.com/1093dd9ecf87274ff9723ff18819eae4?s=48&amp;d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2F1093dd9ecf87274ff9723ff18819eae4%3Fd%3Dmm%26s%3D48%26noRedirect%3Dtrue"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"registered"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"role"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Developer"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-
-<p>This endpoint updates a specific user.</p>
-
-<h3 id='http-request-4'>HTTP Request</h3>
-
-<p><code>PUT /users/&lt;ID&gt;</code></p>
-
-<h3 id='available-parameters-2'>Available Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><a href="#roles">role_id</a></td>
-<td>One of the user organization role ID</td>
-</tr>
-</tbody></table>
-
-<p><h1 id='roles'>Roles</h1><h2 id='get-all-roles'>Get All Roles</h2>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote></p>
-
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Developers"</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Managers"</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
-
-<p>This endpoint retrieves all roles.</p>
-
-<h3 id='http-request'>HTTP Request</h3>
-
-<p><code>GET /roles</code></p>
-
-<h3 id='expand-parameters'>Expand Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ratings</td>
-<td><a href="#get-all-ratings">Role ratings</a></td>
-</tr>
-</tbody></table>
-
-<h2 id='role-creation'>Role Creation</h2>
-
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Managers"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-
-<p>This endpoint creates a new role.</p>
-
-<h3 id='http-request-2'>HTTP Request</h3>
-
-<p><code>POST /roles</code> </p>
-
-<h3 id='available-parameters'>Available Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>name</td>
-<td>Role name</td>
-</tr>
-</tbody></table>
-
-<h2 id='role-updating'>Role Updating</h2>
-
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Managers"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-
-<p>This endpoint updates an exist role.</p>
-
-<h3 id='http-request-3'>HTTP Request</h3>
-
-<p><code>PUT /roles/&lt;ID&gt;</code> </p>
-
-<h3 id='available-parameters-2'>Available Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>name</td>
-<td>Role name</td>
-</tr>
-</tbody></table>
-
-<h2 id='role-deleting'>Role Deleting</h2>
-
-<p>This endpoint removes an exist role.</p>
-
-<h3 id='http-request-4'>HTTP Request</h3>
-
-<p><code>DELETE /roles/&lt;ID&gt;</code> </p>
-
-<p><h1 id='issue-ratings'>Issue Ratings</h1><h2 id='get-all-ratings'>Get All Ratings</h2>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote></p>
-
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Development Time"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rating description"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"coefficient"</span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Importance"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"coefficient"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Customer Acquisition"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"coefficient"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre>
-
-<p>This endpoint retrieves all issue ratings for a specific role.</p>
-
-<h3 id='http-request'>HTTP Request</h3>
-
-<p><code>GET /roles/&lt;roleId&gt;/issue-ratings</code></p>
-
-<h2 id='rating-creation'>Rating Creation</h2>
-
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Development Time"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rating description"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"coefficient"</span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-
-<p>This endpoint creates a new issue rating.</p>
-
-<h3 id='http-request-2'>HTTP Request</h3>
-
-<p><code>POST /roles/&lt;roleId&gt;/issue-ratings</code> </p>
-
-<h3 id='available-parameters'>Available Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>name</td>
-<td>Rating name</td>
-</tr>
-<tr>
-<td>description</td>
-<td>Rating description</td>
-</tr>
-<tr>
-<td>coefficient</td>
-<td>Rating coefficient</td>
-</tr>
-</tbody></table>
-
-<h2 id='rating-updating'>Rating Updating</h2>
-
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Development Time"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rating description"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"coefficient"</span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-
-<p>This endpoint updates an exist issue rating.</p>
-
-<h3 id='http-request-3'>HTTP Request</h3>
-
-<p><code>PUT /roles/&lt;roleId&gt;/issue-ratings/&lt;ID&gt;</code> </p>
-
-<h3 id='available-parameters-2'>Available Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>name</td>
-<td>Rating name</td>
-</tr>
-<tr>
-<td>description</td>
-<td>Rating description</td>
-</tr>
-<tr>
-<td>coefficient</td>
-<td>Rating coefficient</td>
-</tr>
-</tbody></table>
-
-<h2 id='rating-deleting'>Rating Deleting</h2>
-
-<p>This endpoint removes an exist issue rating.</p>
-
-<h3 id='http-request-4'>HTTP Request</h3>
-
-<p><code>DELETE /roles/&lt;roleId&gt;/issue-ratings/&lt;ID&gt;</code> </p>
 
 <p><h1 id='issue-lists'>Issue Lists</h1><h2 id='get-all-lists'>Get All Lists</h2>
 <blockquote>
@@ -807,6 +524,20 @@
 <tr>
 <td>all</td>
 <td>Show all lists. By default, only lists for rating are show</td>
+</tr>
+</tbody></table>
+
+<h3 id='expand-parameters'>Expand Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>roles</td>
+<td><a href="#roles">List roles</a></td>
 </tr>
 </tbody></table>
 
@@ -1090,6 +821,315 @@ If <code>rating_id</code> in <code>votes</code> collection is null – it means 
 <h3 id='http-request-8'>HTTP Request</h3>
 
 <p><code>GET /issue-lists/&lt;ID&gt;/unvoted</code> </p>
+
+<p><h1 id='roles'>Roles</h1><h2 id='get-all-roles'>Get All Roles</h2>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote></p>
+
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Developers"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"issue_list_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Managers"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"issue_list_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint retrieves all roles.</p>
+
+<h3 id='http-request'>HTTP Request</h3>
+
+<p><code>GET /issue-lists/&lt;LIST_ID&gt;/roles</code></p>
+
+<h3 id='expand-parameters'>Expand Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ratings</td>
+<td><a href="#get-all-ratings">Role ratings</a></td>
+</tr>
+</tbody></table>
+
+<h2 id='role-creation'>Role Creation</h2>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Managers"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"issue_list_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint creates a new role.</p>
+
+<h3 id='http-request-2'>HTTP Request</h3>
+
+<p><code>POST /issue-lists/&lt;LIST_ID&gt;/roles</code> </p>
+
+<h3 id='available-parameters'>Available Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>Role name</td>
+</tr>
+</tbody></table>
+
+<h2 id='role-updating'>Role Updating</h2>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Managers"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"issue_list_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint updates an exist role.</p>
+
+<h3 id='http-request-3'>HTTP Request</h3>
+
+<p><code>PUT /issue-lists/&lt;LIST_ID&gt;/roles/&lt;ID&gt;</code> </p>
+
+<h3 id='available-parameters-2'>Available Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>Role name</td>
+</tr>
+</tbody></table>
+
+<h2 id='role-deleting'>Role Deleting</h2>
+
+<p>This endpoint removes an exist role.</p>
+
+<h3 id='http-request-4'>HTTP Request</h3>
+
+<p><code>DELETE /issue-lists/&lt;LIST_ID&gt;/roles/&lt;ID&gt;</code> </p>
+
+<p><h1 id='role-users'>Role Users</h1><h2 id='get-all-role-users'>Get All Role Users</h2>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote></p>
+
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"displayName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User 1"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user1@example.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://avatar-cdn.atlassian.com/1093dd9ecf87274ff9723ff18819eae4?s=48&amp;d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2F1093dd9ecf87274ff9723ff18819eae4%3Fd%3Dmm%26s%3D48%26noRedirect%3Dtrue"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"registered"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"displayName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User 2"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user2@example.com"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://avatar-cdn.atlassian.com/fec5dac2a617615e81b49fbd049651fa?s=48&amp;d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Ffec5dac2a617615e81b49fbd049651fa%3Fd%3Dmm%26s%3D48%26noRedirect%3Dtrue"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"registered"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint retrieves all role users.</p>
+
+<h3 id='http-request'>HTTP Request</h3>
+
+<p><code>GET /issue-lists/&lt;LIST_ID&gt;/roles/&lt;ROLE_ID&gt;/users</code></p>
+
+<h2 id='role-user-creation'>Role User Creation</h2>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"role_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint creates a new role user.</p>
+
+<h3 id='http-request-2'>HTTP Request</h3>
+
+<p><code>POST /issue-lists/&lt;LIST_ID&gt;/roles/&lt;ROLE_ID&gt;/users</code> </p>
+
+<h3 id='available-parameters'>Available Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>user_id</td>
+<td>User ID</td>
+</tr>
+</tbody></table>
+
+<h2 id='role-deleting'>Role Deleting</h2>
+
+<p>This endpoint removes an exist role user.</p>
+
+<h3 id='http-request-3'>HTTP Request</h3>
+
+<p><code>DELETE /issue-lists/&lt;LIST_ID&gt;/roles/&lt;ROLE_ID&gt;/users/&lt;USER_ID&gt;</code> </p>
+
+<p><h1 id='issue-ratings'>Issue Ratings</h1><h2 id='get-all-ratings'>Get All Ratings</h2>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote></p>
+
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Development Time"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rating description"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"coefficient"</span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Importance"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"coefficient"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Customer Acquisition"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"coefficient"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint retrieves all issue ratings for a specific role.</p>
+
+<h3 id='http-request'>HTTP Request</h3>
+
+<p><code>GET /issue-lists/&lt;LIST_ID&gt;/roles/&lt;ROLE_ID&gt;/issue-ratings</code></p>
+
+<h2 id='rating-creation'>Rating Creation</h2>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Development Time"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rating description"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"coefficient"</span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint creates a new issue rating.</p>
+
+<h3 id='http-request-2'>HTTP Request</h3>
+
+<p><code>POST /issue-lists/&lt;LIST_ID&gt;/roles/&lt;roleId&gt;/issue-ratings</code> </p>
+
+<h3 id='available-parameters'>Available Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>Rating name</td>
+</tr>
+<tr>
+<td>description</td>
+<td>Rating description</td>
+</tr>
+<tr>
+<td>coefficient</td>
+<td>Rating coefficient</td>
+</tr>
+</tbody></table>
+
+<h2 id='rating-updating'>Rating Updating</h2>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Development Time"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rating description"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"coefficient"</span><span class="p">:</span><span class="w"> </span><span class="mi">-1</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint updates an exist issue rating.</p>
+
+<h3 id='http-request-3'>HTTP Request</h3>
+
+<p><code>PUT /issue-lists/&lt;LIST_ID&gt;/roles/&lt;roleId&gt;/issue-ratings/&lt;ID&gt;</code> </p>
+
+<h3 id='available-parameters-2'>Available Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>name</td>
+<td>Rating name</td>
+</tr>
+<tr>
+<td>description</td>
+<td>Rating description</td>
+</tr>
+<tr>
+<td>coefficient</td>
+<td>Rating coefficient</td>
+</tr>
+</tbody></table>
+
+<h2 id='rating-deleting'>Rating Deleting</h2>
+
+<p>This endpoint removes an exist issue rating.</p>
+
+<h3 id='http-request-4'>HTTP Request</h3>
+
+<p><code>DELETE /issue-lists/&lt;LIST_ID&gt;/roles/&lt;roleId&gt;/issue-ratings/&lt;ID&gt;</code> </p>
 
       </div>
       <div class="dark-box">

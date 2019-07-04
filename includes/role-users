@@ -1,3 +1,8 @@
+<h1 id='role-users'>Role Users</h1><h2 id='get-all-role-users'>Get All Role Users</h2>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+
 <pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
@@ -17,3 +22,37 @@
     </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
+
+<p>This endpoint retrieves all role users.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET /issue-lists/&lt;LIST_ID&gt;/roles/&lt;ROLE_ID&gt;/users</code></p>
+<h2 id='role-user-creation'>Role User Creation</h2>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"role_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>This endpoint creates a new role user.</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>POST /issue-lists/&lt;LIST_ID&gt;/roles/&lt;ROLE_ID&gt;/users</code> </p>
+<h3 id='available-parameters'>Available Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>user_id</td>
+<td>User ID</td>
+</tr>
+</tbody></table>
+<h2 id='role-deleting'>Role Deleting</h2>
+<p>This endpoint removes an exist role user.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>DELETE /issue-lists/&lt;LIST_ID&gt;/roles/&lt;ROLE_ID&gt;/users/&lt;USER_ID&gt;</code> </p>
