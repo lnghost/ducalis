@@ -228,9 +228,6 @@
                   <li>
                     <a href="#organization-info" class="toc-h2 toc-link" data-title="Organization Info">Organization Info</a>
                   </li>
-                  <li>
-                    <a href="#organization-settings" class="toc-h2 toc-link" data-title="Organization Settings">Organization Settings</a>
-                  </li>
               </ul>
           </li>
           <li>
@@ -365,7 +362,6 @@
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My organization"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"admin_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"top_priority"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
     </span><span class="s2">"last_updated"</span><span class="p">:</span><span class="s2">"2019-07-08T14:27:35+0000"</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
@@ -395,41 +391,6 @@
 <tr>
 <td>issueLists</td>
 <td><a href="#issue-lists">Organization issue lists</a></td>
-</tr>
-</tbody></table>
-
-<h2 id='organization-settings'>Organization Settings</h2>
-
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My organization"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"admin_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"top_priority"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"last_updated"</span><span class="p">:</span><span class="s2">"2019-07-08T14:27:35+0000"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-
-<p>This endpoint updates the organization settings.</p>
-
-<h3 id='http-request-2'>HTTP Request</h3>
-
-<p><code>PUT /organization</code> </p>
-
-<h3 id='available-parameters'>Available Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>top_priority</td>
-<td>Top priority of tasks</td>
 </tr>
 </tbody></table>
 
