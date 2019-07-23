@@ -5,6 +5,7 @@
         </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
         </span><span class="s2">"jira_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10100</span><span class="p">,</span><span class="w">
         </span><span class="s2">"is_rating_list"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"top_priority"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
         </span><span class="s2">"_links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
             </span><span class="s2">"jira"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
                 </span><span class="s2">"href"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://domain.atlassian.net/issues/?filter=10100"</span><span class="w">
