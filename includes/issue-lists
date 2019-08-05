@@ -46,6 +46,10 @@
 <td>roles</td>
 <td><a href="#roles">List roles</a></td>
 </tr>
+<tr>
+<td>owner</td>
+<td>Filter owner information</td>
+</tr>
 </tbody></table>
 <h2 id='get-list'>Get List</h2>
 <blockquote>
