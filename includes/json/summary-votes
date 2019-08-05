@@ -42,7 +42,8 @@
                 </span><span class="s2">"rating_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
                 </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="mf">2.4</span><span class="w">
             </span><span class="p">}</span><span class="w">
-        </span><span class="p">]</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="s2">"all_voted"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
