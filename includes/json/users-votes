@@ -24,6 +24,7 @@
                      </span><span class="s2">"thumbnail"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://concertwithme.atlassian.net/secure/thumbnail/14153/Atlanta+Braves+Schedule+and+tickets+2018.png"</span><span class="w">
                  </span><span class="p">}</span><span class="w">
              </span><span class="p">],</span><span class="w">
+             </span><span class="s2">"sprint_status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACTIVE"</span><span class="p">,</span><span class="w">
              </span><span class="s2">"create_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-04-24T13:40:23+0000"</span><span class="p">,</span><span class="w">
              </span><span class="s2">"update_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-06T10:14:02+0000"</span><span class="p">,</span><span class="w">
              </span><span class="s2">"_links"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
