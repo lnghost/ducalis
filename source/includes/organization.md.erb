@@ -18,21 +18,3 @@ Parameter | Description
 admin | [Organization admin user](#get-user)
 users | [List of users](#get-all-users)
 issueLists | [Organization issue lists](#issue-lists)
-
-## Organization Settings
-
-> The above command returns JSON structured like this:
-
-<%= partial "includes/json/organization.md.erb" %>
-
-This endpoint updates the organization settings.
-
-### HTTP Request
-
-`PUT /organization` 
-
-### Available Parameters
-
-Parameter | Description
---------- | -----------
-votes_lifetime | Lifetime of votes
