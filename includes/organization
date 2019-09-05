@@ -8,7 +8,6 @@
     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My organization"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"admin_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
     </span><span class="s2">"votes_lifetime"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"slack_connected"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
     </span><span class="s2">"last_updated"</span><span class="p">:</span><span class="s2">"2019-07-08T14:27:35+0000"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"_links"</span><span class="p">:{</span><span class="w">
           </span><span class="s2">"slack"</span><span class="p">:{</span><span class="w">
