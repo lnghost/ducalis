@@ -141,3 +141,14 @@ This endpoint returns a number of unvoted issues in the list, for a current user
 
 `GET /issue-lists/<ID>/unvoted` 
 
+## Users on the board
+
+> The above command returns JSON structured like this:
+
+<%= partial "includes/json/issue-list-users.md.erb" %>
+
+Returns a list of users with active issues on the board 
+
+### HTTP Request
+
+`GET /issue-lists/<ID>/users`
