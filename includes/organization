@@ -30,16 +30,12 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>admin</td>
-<td><a href="#get-user">Organization admin user</a></td>
-</tr>
-<tr>
 <td>users</td>
 <td><a href="#get-all-users">List of users</a></td>
 </tr>
 <tr>
-<td>issueLists</td>
-<td><a href="#issue-lists">Organization issue lists</a></td>
+<td>boards</td>
+<td><a href="#issue-lists">Organization configured boards</a></td>
 </tr>
 </tbody></table>
 <h2 id='organization-settings'>Organization Settings</h2>

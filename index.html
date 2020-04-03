@@ -248,7 +248,21 @@
               </ul>
           </li>
           <li>
-            <a href="#issue-lists" class="toc-h1 toc-link" data-title="Issue Lists">Issue Lists</a>
+            <a href="#platforms" class="toc-h1 toc-link" data-title="Platforms">Platforms</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-all-platforms" class="toc-h2 toc-link" data-title="Get All Platforms">Get All Platforms</a>
+                  </li>
+                  <li>
+                    <a href="#get-a-platform" class="toc-h2 toc-link" data-title="Get a platform">Get a platform</a>
+                  </li>
+                  <li>
+                    <a href="#change-platform-status" class="toc-h2 toc-link" data-title="Change platform status">Change platform status</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#boards" class="toc-h1 toc-link" data-title="Boards">Boards</a>
               <ul class="toc-list-h2">
                   <li>
                     <a href="#get-all-lists" class="toc-h2 toc-link" data-title="Get All Lists">Get All Lists</a>
@@ -395,16 +409,12 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>admin</td>
-<td><a href="#get-user">Organization admin user</a></td>
-</tr>
-<tr>
 <td>users</td>
 <td><a href="#get-all-users">List of users</a></td>
 </tr>
 <tr>
-<td>issueLists</td>
-<td><a href="#issue-lists">Organization issue lists</a></td>
+<td>boards</td>
+<td><a href="#issue-lists">Organization configured boards</a></td>
 </tr>
 </tbody></table>
 
@@ -546,7 +556,85 @@
 
 <p><code>GET /users/&lt;ID&gt;</code></p>
 
-<p><h1 id='issue-lists'>Issue Lists</h1><h2 id='get-all-lists'>Get All Lists</h2>
+<p><h1 id='platforms'>Platforms</h1><h2 id='get-all-platforms'>Get All Platforms</h2>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote></p>
+
+<pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jira"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"concertwithme"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"is_enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"has_access"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
+</span></code></pre>
+
+<p>Returns all platforms</p>
+
+<h3 id='http-request'>HTTP Request</h3>
+
+<p><code>GET /platforms</code></p>
+
+<h2 id='get-a-platform'>Get a platform</h2>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jira"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"concertwithme"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"is_enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"has_access"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>Returns a platform by ID</p>
+
+<h3 id='http-request-2'>HTTP Request</h3>
+
+<p><code>GET /platforms/&lt;ID&gt;</code> </p>
+
+<h2 id='change-platform-status'>Change platform status</h2>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"provider"</span><span class="p">:</span><span class="w"> </span><span class="s2">"jira"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"concertwithme"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"is_enabled"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"has_access"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>Enables or disables a platform</p>
+
+<h3 id='http-request-3'>HTTP Request</h3>
+
+<p><code>PUT /platforms/&lt;ID&gt;/change-status</code></p>
+
+<h3 id='available-parameters'>Available Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>status</td>
+<td>bool true or false</td>
+</tr>
+</tbody></table>
+
+<p><h1 id='boards'>Boards</h1><h2 id='get-all-lists'>Get All Lists</h2>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote></p>

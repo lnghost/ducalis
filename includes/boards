@@ -1,4 +1,4 @@
-<h1 id='issue-lists'>Issue Lists</h1><h2 id='get-all-lists'>Get All Lists</h2>
+<h1 id='boards'>Boards</h1><h2 id='get-all-lists'>Get All Lists</h2>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
