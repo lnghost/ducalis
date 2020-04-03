@@ -1,0 +1,42 @@
+# Platforms
+
+## Get All Platforms
+> The above command returns JSON structured like this:
+
+<%= partial "includes/json/platforms.md.erb" %>
+
+Returns all platforms
+
+### HTTP Request
+
+`GET /platforms`
+
+## Get a platform
+
+> The above command returns JSON structured like this:
+
+<%= partial "includes/json/platform.md.erb" %>
+
+Returns a platform by ID
+
+### HTTP Request
+
+`GET /platforms/<ID>` 
+
+## Change platform status
+
+> The above command returns JSON structured like this:
+
+<%= partial "includes/json/platform.md.erb" %>
+
+Enables or disables a platform
+
+### HTTP Request
+
+`PUT /platforms/<ID>/change-status`
+
+### Available Parameters
+
+Parameter | Description
+--------- | -----------
+status | bool true or false 
