@@ -1,82 +1,82 @@
 # Boards
 
-## Get All Lists
+## Get All Boards
 
 > The above command returns JSON structured like this:
 
-<%= partial "includes/json/issue-lists.md.erb" %>
+<%= partial "includes/json/boards.md.erb" %>
 
-This endpoint retrieves all issue lists.
+This endpoint retrieves all boards.
 
 ### HTTP Request
 
-`GET /issue-lists`
+`GET /boards`
 
 ### Available Parameters
 
 Parameter | Description
 --------- | -----------
-all | Show all lists. By default, only lists for rating are show
+all | Show all boards. By default, only boards for rating are show
 
 ### Expand Parameters
 
 Parameter | Description
 --------- | -----------
-roles | [List roles](#roles)
+roles | [Board roles](#roles)
 owner | Filter owner information
 
-## Get List
+## Get Board
 
 > The above command returns JSON structured like this:
 
-<%= partial "includes/json/issue-list.md.erb" %>
+<%= partial "includes/json/board.md.erb" %>
 
-This endpoint retrieves a specific issue list.
+This endpoint retrieves a specific board.
 
 ### HTTP Request
 
-`GET /issue-lists/<ID>`
+`GET /boards/<ID>`
 
-## List Updating
+## Board Updating
 
 > The above command returns JSON structured like this:
 
-<%= partial "includes/json/issue-list.md.erb" %>
+<%= partial "includes/json/board.md.erb" %>
 
-This endpoint updates an exist issue list.
+This endpoint updates an exist board.
 
 ### HTTP Request
 
-`PUT /issue-lists/<ID>` 
+`PUT /boards/<ID>` 
 
 ### Available Parameters
 
 Parameter | Description
 --------- | -----------
-is_rating_list | Use this list for ratings
+is_rating_list | Use this board for ratings
 top_priority | Number of highlighted tasks in the top
 votes_lifetime | Lifetime of votes in days
 notifications | Settings for the Slack schedule field
 
-## List Issues
+## Board Issues
 
 > The above command returns JSON structured like this:
 
 <%= partial "includes/json/issues.md.erb" %>
 
-This endpoint retrieves a list of issues in a specific issue list.
+This endpoint retrieves a list of issues in a specific board.
 
 ### HTTP Request
 
-`GET /issue-lists/<ID>/issues`
+`GET /boards/<ID>/issues`
 
 ## Create Vote
 
-This endpoint creates a new vote into the list
+This endpoint creates a new vote into the board
 
 ### HTTP Request
 
-`POST /issue-lists/<ID>/vote` 
+`POST /boards/<ID>/vote` 
 
 ### Available Parameters
 
@@ -96,7 +96,7 @@ Returns a list of votes divided by users
 
 ### HTTP Request
 
-`GET /issue-lists/<ID>/users-votes` 
+`GET /boards/<ID>/users-votes` 
 
 ### Available Parameters
 
@@ -117,7 +117,7 @@ If `rating_id` in `votes` collection is null – it means that this is a summary
 
 ### HTTP Request
 
-`GET /issue-lists/<ID>/summary-votes`
+`GET /boards/<ID>/summary-votes`
 
 ### Available Parameters
 
@@ -135,20 +135,26 @@ assignee_id | ID of user for filtration
 }
 ```
 
-This endpoint returns a number of unvoted issues in the list, for a current user only 
+This endpoint returns a number of unvoted issues in the board, for a current user only 
 
 ### HTTP Request
 
-`GET /issue-lists/<ID>/unvoted` 
+`GET /boards/<ID>/unvoted` 
 
-## Users on the board
+## Platform users on the board
 
 > The above command returns JSON structured like this:
 
-<%= partial "includes/json/issue-list-users.md.erb" %>
+<%= partial "includes/json/board-users.md.erb" %>
 
-Returns a list of users with active issues on the board 
+Returns a list of platform users with active issues on the board 
 
 ### HTTP Request
 
-`GET /issue-lists/<ID>/users`
+`GET /boards/<ID>/users`
+
+### Expand Parameters
+
+Parameter | Description
+--------- | -----------
+user | [User model](#get-user)
