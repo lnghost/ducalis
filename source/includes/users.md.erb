@@ -15,8 +15,7 @@ This endpoint retrieves all users.
 
 Parameter | Description
 --------- | -----------
-active | Return only active Jira users
-registered | Return only users that are registered in the application 
+active | Return only active Jira users 
 
 ## Current User
 
@@ -41,3 +40,22 @@ This endpoint retrieves a specific user.
 ### HTTP Request
 
 `GET /users/<ID>`
+
+## Change user status
+
+> The above command returns JSON structured like this:
+
+<%= partial "includes/json/user.md.erb" %>
+
+Changes a user status
+
+### HTTP Request
+
+`GET /users/change-status`
+
+### Available Parameters
+
+Parameter | Description
+--------- | -----------
+id | User ID
+status | Status (1 or 0)
