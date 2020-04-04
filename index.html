@@ -245,6 +245,9 @@
                   <li>
                     <a href="#get-user" class="toc-h2 toc-link" data-title="Get User">Get User</a>
                   </li>
+                  <li>
+                    <a href="#change-user-status" class="toc-h2 toc-link" data-title="Change user status">Change user status</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -265,16 +268,16 @@
             <a href="#boards" class="toc-h1 toc-link" data-title="Boards">Boards</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-lists" class="toc-h2 toc-link" data-title="Get All Lists">Get All Lists</a>
+                    <a href="#get-all-boards" class="toc-h2 toc-link" data-title="Get All Boards">Get All Boards</a>
                   </li>
                   <li>
-                    <a href="#get-list" class="toc-h2 toc-link" data-title="Get List">Get List</a>
+                    <a href="#get-board" class="toc-h2 toc-link" data-title="Get Board">Get Board</a>
                   </li>
                   <li>
-                    <a href="#list-updating" class="toc-h2 toc-link" data-title="List Updating">List Updating</a>
+                    <a href="#board-updating" class="toc-h2 toc-link" data-title="Board Updating">Board Updating</a>
                   </li>
                   <li>
-                    <a href="#list-issues" class="toc-h2 toc-link" data-title="List Issues">List Issues</a>
+                    <a href="#board-issues" class="toc-h2 toc-link" data-title="Board Issues">Board Issues</a>
                   </li>
                   <li>
                     <a href="#create-vote" class="toc-h2 toc-link" data-title="Create Vote">Create Vote</a>
@@ -289,7 +292,7 @@
                     <a href="#unvoted-issues-count" class="toc-h2 toc-link" data-title="Unvoted issues count">Unvoted issues count</a>
                   </li>
                   <li>
-                    <a href="#users-on-the-board" class="toc-h2 toc-link" data-title="Users on the board">Users on the board</a>
+                    <a href="#platform-users-on-the-board" class="toc-h2 toc-link" data-title="Platform users on the board">Platform users on the board</a>
                   </li>
               </ul>
           </li>
@@ -412,10 +415,6 @@
 <td>users</td>
 <td><a href="#get-all-users">List of users</a></td>
 </tr>
-<tr>
-<td>boards</td>
-<td><a href="#issue-lists">Organization configured boards</a></td>
-</tr>
 </tbody></table>
 
 <h2 id='organization-settings'>Organization Settings</h2>
@@ -468,20 +467,17 @@
 <pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"displayName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User 1"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"accountId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ebf3dfa3-8bcf-4d3e-b04d-049b5fa40128"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User 1"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user1@example.com"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://avatar-cdn.atlassian.com/1093dd9ecf87274ff9723ff18819eae4?s=48&amp;d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2F1093dd9ecf87274ff9723ff18819eae4%3Fd%3Dmm%26s%3D48%26noRedirect%3Dtrue"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"registered"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"displayName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User 2"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User 2"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user2@example.com"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://avatar-cdn.atlassian.com/fec5dac2a617615e81b49fbd049651fa?s=48&amp;d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Ffec5dac2a617615e81b49fbd049651fa%3Fd%3Dmm%26s%3D48%26noRedirect%3Dtrue"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"registered"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
@@ -504,10 +500,6 @@
 <td>active</td>
 <td>Return only active Jira users</td>
 </tr>
-<tr>
-<td>registered</td>
-<td>Return only users that are registered in the application</td>
-</tr>
 </tbody></table>
 
 <h2 id='current-user'>Current User</h2>
@@ -518,12 +510,10 @@
 
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"displayName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User 1"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"accountId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ebf3dfa3-8bcf-4d3e-b04d-049b5fa40128"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User 1"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user1@example.com"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://avatar-cdn.atlassian.com/1093dd9ecf87274ff9723ff18819eae4?s=48&amp;d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2F1093dd9ecf87274ff9723ff18819eae4%3Fd%3Dmm%26s%3D48%26noRedirect%3Dtrue"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"registered"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -541,12 +531,10 @@
 
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"displayName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User 1"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"accountId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ebf3dfa3-8bcf-4d3e-b04d-049b5fa40128"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User 1"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user1@example.com"</span><span class="p">,</span><span class="w">
     </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://avatar-cdn.atlassian.com/1093dd9ecf87274ff9723ff18819eae4?s=48&amp;d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2F1093dd9ecf87274ff9723ff18819eae4%3Fd%3Dmm%26s%3D48%26noRedirect%3Dtrue"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"registered"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
@@ -555,6 +543,45 @@
 <h3 id='http-request-3'>HTTP Request</h3>
 
 <p><code>GET /users/&lt;ID&gt;</code></p>
+
+<h2 id='change-user-status'>Change user status</h2>
+
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User 1"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user1@example.com"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://avatar-cdn.atlassian.com/1093dd9ecf87274ff9723ff18819eae4?s=48&amp;d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2F1093dd9ecf87274ff9723ff18819eae4%3Fd%3Dmm%26s%3D48%26noRedirect%3Dtrue"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+
+<p>Changes a user status</p>
+
+<h3 id='http-request-4'>HTTP Request</h3>
+
+<p><code>GET /users/change-status</code></p>
+
+<h3 id='available-parameters-2'>Available Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>User ID</td>
+</tr>
+<tr>
+<td>status</td>
+<td>Status (1 or 0)</td>
+</tr>
+</tbody></table>
 
 <p><h1 id='platforms'>Platforms</h1><h2 id='get-all-platforms'>Get All Platforms</h2>
 <blockquote>
@@ -634,7 +661,7 @@
 </tr>
 </tbody></table>
 
-<p><h1 id='boards'>Boards</h1><h2 id='get-all-lists'>Get All Lists</h2>
+<p><h1 id='boards'>Boards</h1><h2 id='get-all-boards'>Get All Boards</h2>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote></p>
@@ -643,7 +670,6 @@
     </span><span class="p">{</span><span class="w">
         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
         </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Active issues"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
         </span><span class="s2">"jira_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10100</span><span class="p">,</span><span class="w">
         </span><span class="s2">"is_rating_list"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
         </span><span class="s2">"top_priority"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
@@ -662,11 +688,11 @@
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 
-<p>This endpoint retrieves all issue lists.</p>
+<p>This endpoint retrieves all boards.</p>
 
 <h3 id='http-request'>HTTP Request</h3>
 
-<p><code>GET /issue-lists</code></p>
+<p><code>GET /boards</code></p>
 
 <h3 id='available-parameters'>Available Parameters</h3>
 
@@ -678,7 +704,7 @@
 </thead><tbody>
 <tr>
 <td>all</td>
-<td>Show all lists. By default, only lists for rating are show</td>
+<td>Show all boards. By default, only boards for rating are show</td>
 </tr>
 </tbody></table>
 
@@ -692,7 +718,7 @@
 </thead><tbody>
 <tr>
 <td>roles</td>
-<td><a href="#roles">List roles</a></td>
+<td><a href="#roles">Board roles</a></td>
 </tr>
 <tr>
 <td>owner</td>
@@ -700,7 +726,7 @@
 </tr>
 </tbody></table>
 
-<h2 id='get-list'>Get List</h2>
+<h2 id='get-board'>Get Board</h2>
 
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -709,7 +735,6 @@
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Active issues"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="s2">"jira_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10100</span><span class="p">,</span><span class="w">
     </span><span class="s2">"is_rating_list"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
     </span><span class="s2">"top_priority"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
@@ -727,13 +752,13 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
-<p>This endpoint retrieves a specific issue list.</p>
+<p>This endpoint retrieves a specific board.</p>
 
 <h3 id='http-request-2'>HTTP Request</h3>
 
-<p><code>GET /issue-lists/&lt;ID&gt;</code></p>
+<p><code>GET /boards/&lt;ID&gt;</code></p>
 
-<h2 id='list-updating'>List Updating</h2>
+<h2 id='board-updating'>Board Updating</h2>
 
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -742,7 +767,6 @@
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
     </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
     </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Active issues"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
     </span><span class="s2">"jira_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">10100</span><span class="p">,</span><span class="w">
     </span><span class="s2">"is_rating_list"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
     </span><span class="s2">"top_priority"</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w">
@@ -760,11 +784,11 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
-<p>This endpoint updates an exist issue list.</p>
+<p>This endpoint updates an exist board.</p>
 
 <h3 id='http-request-3'>HTTP Request</h3>
 
-<p><code>PUT /issue-lists/&lt;ID&gt;</code> </p>
+<p><code>PUT /boards/&lt;ID&gt;</code> </p>
 
 <h3 id='available-parameters-2'>Available Parameters</h3>
 
@@ -776,7 +800,7 @@
 </thead><tbody>
 <tr>
 <td>is_rating_list</td>
-<td>Use this list for ratings</td>
+<td>Use this board for ratings</td>
 </tr>
 <tr>
 <td>top_priority</td>
@@ -792,7 +816,7 @@
 </tr>
 </tbody></table>
 
-<h2 id='list-issues'>List Issues</h2>
+<h2 id='board-issues'>Board Issues</h2>
 
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -835,19 +859,19 @@
 </span><span class="p">]</span><span class="w">
 </span></code></pre>
 
-<p>This endpoint retrieves a list of issues in a specific issue list.</p>
+<p>This endpoint retrieves a list of issues in a specific board.</p>
 
 <h3 id='http-request-4'>HTTP Request</h3>
 
-<p><code>GET /issue-lists/&lt;ID&gt;/issues</code></p>
+<p><code>GET /boards/&lt;ID&gt;/issues</code></p>
 
 <h2 id='create-vote'>Create Vote</h2>
 
-<p>This endpoint creates a new vote into the list</p>
+<p>This endpoint creates a new vote into the board</p>
 
 <h3 id='http-request-5'>HTTP Request</h3>
 
-<p><code>POST /issue-lists/&lt;ID&gt;/vote</code> </p>
+<p><code>POST /boards/&lt;ID&gt;/vote</code> </p>
 
 <h3 id='available-parameters-3'>Available Parameters</h3>
 
@@ -932,7 +956,7 @@
 
 <h3 id='http-request-6'>HTTP Request</h3>
 
-<p><code>GET /issue-lists/&lt;ID&gt;/users-votes</code> </p>
+<p><code>GET /boards/&lt;ID&gt;/users-votes</code> </p>
 
 <h3 id='available-parameters-4'>Available Parameters</h3>
 
@@ -1018,7 +1042,7 @@ If <code>rating_id</code> in <code>votes</code> collection is null – it means 
 
 <h3 id='http-request-7'>HTTP Request</h3>
 
-<p><code>GET /issue-lists/&lt;ID&gt;/summary-votes</code></p>
+<p><code>GET /boards/&lt;ID&gt;/summary-votes</code></p>
 
 <h3 id='available-parameters-5'>Available Parameters</h3>
 
@@ -1045,51 +1069,63 @@ If <code>rating_id</code> in <code>votes</code> collection is null – it means 
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
-<p>This endpoint returns a number of unvoted issues in the list, for a current user only </p>
+<p>This endpoint returns a number of unvoted issues in the board, for a current user only </p>
 
 <h3 id='http-request-8'>HTTP Request</h3>
 
-<p><code>GET /issue-lists/&lt;ID&gt;/unvoted</code> </p>
+<p><code>GET /boards/&lt;ID&gt;/unvoted</code> </p>
 
-<h2 id='users-on-the-board'>Users on the board</h2>
+<h2 id='platform-users-on-the-board'>Platform users on the board</h2>
 
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
 
 <pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"displayName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Asya Chirkova"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"accountId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d81d5c7d7f1360c34f0daf8"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"asya@tendee.io"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5d81d5c7d7f1360c34f0daf8/22643e7b-9193-4071-8c8c-740287e99e80/128?size=48&amp;s=48"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"registered"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"issue_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
-    </span><span class="p">},</span><span class="w">
-    </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"user"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"displayName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vitalii Myshliaev"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"accountId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"557058:44da19dd-2c6d-4425-b8bb-7bf07df5ca7e"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vit@tendee.io"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/557058:44da19dd-2c6d-4425-b8bb-7bf07df5ca7e/f827310a-a0ce-4fd4-82d8-de9271993419/128?size=48&amp;s=48"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"registered"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-        </span><span class="p">},</span><span class="w">
-        </span><span class="s2">"issue_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
+   </span><span class="p">{</span><span class="w">
+
+       </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w">
+       </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w">
+       </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"asya@tendee.io"</span><span class="p">,</span><span class="w">
+       </span><span class="s2">"is_active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+       </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Asya Chirkova"</span><span class="p">,</span><span class="w">
+       </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/5d81d5c7d7f1360c34f0daf8/22643e7b-9193-4071-8c8c-740287e99e80/128?size=48&amp;s=48"</span><span class="p">,</span><span class="w">
+       </span><span class="s2">"issue_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+
+   </span><span class="p">},</span><span class="w">
+   </span><span class="p">{</span><span class="w">
+
+       </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+       </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w">
+       </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vit@tendee.io"</span><span class="p">,</span><span class="w">
+       </span><span class="s2">"is_active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+       </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vitalii Myshliaev"</span><span class="p">,</span><span class="w">
+       </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://avatar-management--avatars.us-west-2.prod.public.atl-paas.net/557058:44da19dd-2c6d-4425-b8bb-7bf07df5ca7e/f827310a-a0ce-4fd4-82d8-de9271993419/128?size=48&amp;s=48"</span><span class="p">,</span><span class="w">
+       </span><span class="s2">"issue_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+
+   </span><span class="p">}</span><span class="w">
+</span><span class="p">]</span><span class="w">
 </span></code></pre>
 
-<p>Returns a list of users with active issues on the board </p>
+<p>Returns a list of platform users with active issues on the board </p>
 
 <h3 id='http-request-9'>HTTP Request</h3>
 
-<p><code>GET /issue-lists/&lt;ID&gt;/users</code></p>
+<p><code>GET /boards/&lt;ID&gt;/users</code></p>
+
+<h3 id='expand-parameters-2'>Expand Parameters</h3>
+
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>user</td>
+<td><a href="#get-user">User model</a></td>
+</tr>
+</tbody></table>
 
 <p><h1 id='roles'>Roles</h1><h2 id='get-all-roles'>Get All Roles</h2>
 <blockquote>
@@ -1114,7 +1150,7 @@ If <code>rating_id</code> in <code>votes</code> collection is null – it means 
 
 <h3 id='http-request'>HTTP Request</h3>
 
-<p><code>GET /issue-lists/&lt;LIST_ID&gt;/roles</code></p>
+<p><code>GET /boards/&lt;LIST_ID&gt;/roles</code></p>
 
 <h3 id='expand-parameters'>Expand Parameters</h3>
 
@@ -1147,7 +1183,7 @@ If <code>rating_id</code> in <code>votes</code> collection is null – it means 
 
 <h3 id='http-request-2'>HTTP Request</h3>
 
-<p><code>POST /issue-lists/&lt;LIST_ID&gt;/roles</code> </p>
+<p><code>POST /boards/&lt;LIST_ID&gt;/roles</code> </p>
 
 <h3 id='available-parameters'>Available Parameters</h3>
 
@@ -1180,7 +1216,7 @@ If <code>rating_id</code> in <code>votes</code> collection is null – it means 
 
 <h3 id='http-request-3'>HTTP Request</h3>
 
-<p><code>PUT /issue-lists/&lt;LIST_ID&gt;/roles/&lt;ID&gt;</code> </p>
+<p><code>PUT /boards/&lt;LIST_ID&gt;/roles/&lt;ID&gt;</code> </p>
 
 <h3 id='available-parameters-2'>Available Parameters</h3>
 
@@ -1202,7 +1238,7 @@ If <code>rating_id</code> in <code>votes</code> collection is null – it means 
 
 <h3 id='http-request-4'>HTTP Request</h3>
 
-<p><code>DELETE /issue-lists/&lt;LIST_ID&gt;/roles/&lt;ID&gt;</code> </p>
+<p><code>DELETE /boards/&lt;LIST_ID&gt;/roles/&lt;ID&gt;</code> </p>
 
 <p><h1 id='role-users'>Role Users</h1><h2 id='get-all-role-users'>Get All Role Users</h2>
 <blockquote>
@@ -1212,20 +1248,17 @@ If <code>rating_id</code> in <code>votes</code> collection is null – it means 
 <pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"displayName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User 1"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"accountId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ebf3dfa3-8bcf-4d3e-b04d-049b5fa40128"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User 1"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user1@example.com"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://avatar-cdn.atlassian.com/1093dd9ecf87274ff9723ff18819eae4?s=48&amp;d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2F1093dd9ecf87274ff9723ff18819eae4%3Fd%3Dmm%26s%3D48%26noRedirect%3Dtrue"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"registered"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
         </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"displayName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User 2"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"User 2"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"user2@example.com"</span><span class="p">,</span><span class="w">
         </span><span class="s2">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://avatar-cdn.atlassian.com/fec5dac2a617615e81b49fbd049651fa?s=48&amp;d=https%3A%2F%2Fsecure.gravatar.com%2Favatar%2Ffec5dac2a617615e81b49fbd049651fa%3Fd%3Dmm%26s%3D48%26noRedirect%3Dtrue"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"registered"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+        </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">]</span><span class="w">
 </span></code></pre>

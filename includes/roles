@@ -19,7 +19,7 @@
 
 <p>This endpoint retrieves all roles.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET /issue-lists/&lt;LIST_ID&gt;/roles</code></p>
+<p><code>GET /boards/&lt;LIST_ID&gt;/roles</code></p>
 <h3 id='expand-parameters'>Expand Parameters</h3>
 <table><thead>
 <tr>
@@ -46,7 +46,7 @@
 
 <p>This endpoint creates a new role.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
-<p><code>POST /issue-lists/&lt;LIST_ID&gt;/roles</code> </p>
+<p><code>POST /boards/&lt;LIST_ID&gt;/roles</code> </p>
 <h3 id='available-parameters'>Available Parameters</h3>
 <table><thead>
 <tr>
@@ -73,7 +73,7 @@
 
 <p>This endpoint updates an exist role.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
-<p><code>PUT /issue-lists/&lt;LIST_ID&gt;/roles/&lt;ID&gt;</code> </p>
+<p><code>PUT /boards/&lt;LIST_ID&gt;/roles/&lt;ID&gt;</code> </p>
 <h3 id='available-parameters-2'>Available Parameters</h3>
 <table><thead>
 <tr>
@@ -89,4 +89,4 @@
 <h2 id='role-deleting'>Role Deleting</h2>
 <p>This endpoint removes an exist role.</p>
 <h3 id='http-request-4'>HTTP Request</h3>
-<p><code>DELETE /issue-lists/&lt;LIST_ID&gt;/roles/&lt;ID&gt;</code> </p>
+<p><code>DELETE /boards/&lt;LIST_ID&gt;/roles/&lt;ID&gt;</code> </p>
