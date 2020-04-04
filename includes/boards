@@ -55,6 +55,10 @@
 <td>owner</td>
 <td>Filter owner information</td>
 </tr>
+<tr>
+<td>platform</td>
+<td>Platform model</td>
+</tr>
 </tbody></table>
 <h2 id='get-board'>Get Board</h2>
 <blockquote>
@@ -84,6 +88,26 @@
 <p>This endpoint retrieves a specific board.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
 <p><code>GET /boards/&lt;ID&gt;</code></p>
+<h3 id='expand-parameters-2'>Expand Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>roles</td>
+<td><a href="#roles">Board roles</a></td>
+</tr>
+<tr>
+<td>owner</td>
+<td>Filter owner information</td>
+</tr>
+<tr>
+<td>platform</td>
+<td>Platform model</td>
+</tr>
+</tbody></table>
 <h2 id='board-updating'>Board Updating</h2>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -399,7 +423,7 @@ If <code>rating_id</code> in <code>votes</code> collection is null – it means 
 <p>Returns a list of platform users with active issues on the board </p>
 <h3 id='http-request-9'>HTTP Request</h3>
 <p><code>GET /boards/&lt;ID&gt;/users</code></p>
-<h3 id='expand-parameters-2'>Expand Parameters</h3>
+<h3 id='expand-parameters-3'>Expand Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>

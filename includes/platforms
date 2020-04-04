@@ -17,6 +17,18 @@
 <p>Returns all platforms</p>
 <h3 id='http-request'>HTTP Request</h3>
 <p><code>GET /platforms</code></p>
+<h3 id='expand-parameters'>Expand Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>platformUsers</td>
+<td>Platform user model</td>
+</tr>
+</tbody></table>
 <h2 id='get-a-platform'>Get a platform</h2>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -34,6 +46,18 @@
 <p>Returns a platform by ID</p>
 <h3 id='http-request-2'>HTTP Request</h3>
 <p><code>GET /platforms/&lt;ID&gt;</code> </p>
+<h3 id='expand-parameters-2'>Expand Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>platformUsers</td>
+<td>Platform user model</td>
+</tr>
+</tbody></table>
 <h2 id='change-platform-status'>Change platform status</h2>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>

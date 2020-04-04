@@ -31,6 +31,10 @@
 <td>ratings</td>
 <td><a href="#get-all-ratings">Role ratings</a></td>
 </tr>
+<tr>
+<td>platformUsers</td>
+<td>Platform user model</td>
+</tr>
 </tbody></table>
 <h2 id='role-creation'>Role Creation</h2>
 <blockquote>
