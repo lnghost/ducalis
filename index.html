@@ -807,6 +807,10 @@
 <td>platform</td>
 <td>Platform model</td>
 </tr>
+<tr>
+<td>platform-users</td>
+<td>List of platform users</td>
+</tr>
 </tbody></table>
 
 <h2 id='board-updating'>Board Updating</h2>
@@ -1278,24 +1282,6 @@ If <code>rating_id</code> in <code>votes</code> collection is null – it means 
 
 <p><code>GET /boards/&lt;ID&gt;/users</code></p>
 
-<h3 id='available-parameters'>Available Parameters</h3>
-
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>all</td>
-<td>(bool) Show all available users or only with roles. Default false.</td>
-</tr>
-<tr>
-<td>issue_count</td>
-<td>(bool) Return issue_count field. Default false.</td>
-</tr>
-</tbody></table>
-
 <h3 id='expand-parameters'>Expand Parameters</h3>
 
 <table><thead>
@@ -1318,7 +1304,7 @@ If <code>rating_id</code> in <code>votes</code> collection is null – it means 
 
 <p><code>POST /boards/&lt;ID&gt;/users</code> </p>
 
-<h3 id='available-parameters-2'>Available Parameters</h3>
+<h3 id='available-parameters'>Available Parameters</h3>
 
 <table><thead>
 <tr>

@@ -107,6 +107,10 @@
 <td>platform</td>
 <td>Platform model</td>
 </tr>
+<tr>
+<td>platform-users</td>
+<td>List of platform users</td>
+</tr>
 </tbody></table>
 <h2 id='board-updating'>Board Updating</h2>
 <blockquote>

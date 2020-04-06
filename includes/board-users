@@ -30,22 +30,6 @@
 <p>Returns a list of platform users which has an access to the board </p>
 <h3 id='http-request'>HTTP Request</h3>
 <p><code>GET /boards/&lt;ID&gt;/users</code></p>
-<h3 id='available-parameters'>Available Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>all</td>
-<td>(bool) Show all available users or only with roles. Default false.</td>
-</tr>
-<tr>
-<td>issue_count</td>
-<td>(bool) Return issue_count field. Default false.</td>
-</tr>
-</tbody></table>
 <h3 id='expand-parameters'>Expand Parameters</h3>
 <table><thead>
 <tr>
@@ -62,7 +46,7 @@
 <p>This endpoint creates a new role user.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
 <p><code>POST /boards/&lt;ID&gt;/users</code> </p>
-<h3 id='available-parameters-2'>Available Parameters</h3>
+<h3 id='available-parameters'>Available Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
