@@ -1,0 +1,56 @@
+# Board Users
+
+## Get Board Users
+
+> The above command returns JSON structured like this:
+
+<%= partial "includes/json/board-users.md.erb" %>
+
+Returns a list of platform users which has an access to the board 
+
+### HTTP Request
+
+`GET /boards/<ID>/users`
+
+### Available Parameters
+
+Parameter | Description
+--------- | -----------
+all | (bool) Show all available users or only with roles. Default false.
+issue_count | (bool) Return issue_count field. Default false.
+
+### Expand Parameters
+
+Parameter | Description
+--------- | -----------
+user | [User model](#get-user)
+
+
+## Board User Creation
+
+This endpoint creates a new role user.
+
+### HTTP Request
+
+`POST /boards/<ID>/users` 
+
+### Available Parameters
+
+Parameter | Description
+--------- | -----------
+platform_user_id | User ID
+role_id | Role ID
+
+## Board User Deleting
+
+This endpoint removes an exist role user.
+
+### HTTP Request
+
+`DELETE /BOARDS/<BOARD_ID>/users/<PLATFORM_USER_ID>`
+
+### Available Parameters
+
+Parameter | Description
+--------- | -----------
+platform_user_id | User ID 
