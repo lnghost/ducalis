@@ -82,15 +82,3 @@
 <p>This endpoint removes an exist role user.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
 <p><code>DELETE /BOARDS/&lt;BOARD_ID&gt;/users/&lt;PLATFORM_USER_ID&gt;</code></p>
-<h3 id='available-parameters-3'>Available Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>platform_user_id</td>
-<td>User ID</td>
-</tr>
-</tbody></table>
