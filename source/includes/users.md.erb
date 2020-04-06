@@ -51,11 +51,28 @@ Changes a user status
 
 ### HTTP Request
 
-`GET /users/change-status`
+`GET /users/{ID}/change-status`
 
 ### Available Parameters
 
 Parameter | Description
 --------- | -----------
-id | User ID
-status | Status (1 or 0)
+status | Status (1 – active or 0 – disabled)
+
+## Change user role
+
+> The above command returns JSON structured like this:
+
+<%= partial "includes/json/user.md.erb" %>
+
+Changes a user role
+
+### HTTP Request
+
+`GET /users/{ID}/change-role`
+
+### Available Parameters
+
+Parameter | Description
+--------- | -----------
+is_admin | 1 – admin or 0 – base user
