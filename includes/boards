@@ -422,7 +422,7 @@ If <code>rating_id</code> in <code>votes</code> collection is null – it means 
 
 <p>Returns a list of platform users with active issues on the board </p>
 <h3 id='http-request-9'>HTTP Request</h3>
-<p><code>GET /boards/&lt;ID&gt;/users</code></p>
+<p><code>GET /boards/&lt;ID&gt;/platform-users</code></p>
 <h3 id='expand-parameters-3'>Expand Parameters</h3>
 <table><thead>
 <tr>
