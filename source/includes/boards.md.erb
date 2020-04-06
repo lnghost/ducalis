@@ -149,28 +149,3 @@ This endpoint returns a number of unvoted issues in the board, for a current use
 ### HTTP Request
 
 `GET /boards/<ID>/unvoted` 
-
-## Platform users on the board
-
-> The above command returns JSON structured like this:
-
-<%= partial "includes/json/board-users.md.erb" %>
-
-Returns a list of platform users which has an access to the board 
-
-### HTTP Request
-
-`GET /boards/<ID>/available-users`
-
-### Available Parameters
-
-Parameter | Description
---------- | -----------
-all | (bool) Show all available users or only with roles. Default false.
-issue_count | (bool) Return issue_count field. Default false.
-
-### Expand Parameters
-
-Parameter | Description
---------- | -----------
-user | [User model](#get-user)
